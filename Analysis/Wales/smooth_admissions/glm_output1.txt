@@ -1,0 +1,365 @@
+   areaName       date smooth_admissions CP_int CP_t1 CP_t2
+1     Wales 2021-10-28         1.4152367      1    27    11
+2     Wales 2021-10-27         1.3927010      1    26    10
+3     Wales 2021-10-26         1.3836868      1    25     9
+4     Wales 2021-10-25         1.3836868      1    24     8
+5     Wales 2021-10-24         1.4197438      1    23     7
+6     Wales 2021-10-23         1.4332651      1    22     6
+7     Wales 2021-10-22         1.3836868      1    21     5
+8     Wales 2021-10-21         1.3566441      1    20     4
+9     Wales 2021-10-20         1.3431227      1    19     3
+10    Wales 2021-10-19         1.3070657      1    18     2
+11    Wales 2021-10-18         1.2980515      1    17     1
+12    Wales 2021-10-17         1.2529802     NA    NA    NA
+13    Wales 2021-10-16         1.2529802     NA    NA    NA
+14    Wales 2021-10-15         1.2394589     NA    NA    NA
+15    Wales 2021-10-14         1.2755158     NA    NA    NA
+16    Wales 2021-10-13         1.2665016     NA    NA    NA
+17    Wales 2021-10-12         1.2214304     NA    NA    NA
+18    Wales 2021-10-11         1.1763591     NA    NA    NA
+19    Wales 2021-10-10         1.1718520      0     9     0
+20    Wales 2021-10-09         1.0636811      0     8     0
+21    Wales 2021-10-08         1.0546668      0     7     0
+22    Wales 2021-10-07         0.9780457      0     6     0
+23    Wales 2021-10-06         0.9555101      0     5     0
+24    Wales 2021-10-05         0.9870600      0     4     0
+25    Wales 2021-10-04         0.9960742      0     3     0
+26    Wales 2021-10-03         0.9870600      0     2     0
+27    Wales 2021-10-02         1.0997380      0     1     0
+28    Wales 2021-10-01         1.1222737      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 7440925.911, link = log)
+
+Deviance Residuals: 
+      Min         1Q     Median         3Q        Max  
+-0.307425  -0.022564  -0.009387   0.017206   0.112939  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)
+(Intercept) 0.029043   0.577854   0.050    0.960
+CP_int      0.201784   1.392749   0.145    0.885
+CP_t1       0.002596   0.107877   0.024    0.981
+CP_t2       0.004948   0.135111   0.037    0.971
+
+(Dispersion parameter for Negative Binomial(7440926) family taken to be 1)
+
+    Null deviance: 0.72892  on 20  degrees of freedom
+Residual deviance: 0.23936  on 17  degrees of freedom
+  (7 observations deleted due to missingness)
+AIC: 55.403
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  7440926 
+          Std. Err.:  2190836063 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -45.403 
+               Estimate      2.5 %    97.5 %
+(Intercept) 0.029043103 -1.2717622 1.0280301
+CP_int      0.201784234 -2.4378086 3.1044619
+CP_t1       0.002596308 -0.2126178 0.2182046
+CP_t2       0.004947797 -0.2623464 0.2722630
+            Estimate      2.5 %    97.5 %
+(Intercept) 1.029469 0.28033717  2.795553
+CP_int      1.223584 0.08735207 22.297218
+CP_t1       1.002600 0.80846505  1.243842
+CP_t2       1.004960 0.76924453  1.312932
+ lag Autocorrelation D-W Statistic p-value
+   1       0.6177083      0.730252       0
+ Alternative hypothesis: rho != 0
+   areaName       date smooth_admissions CP_int CP_t1 CP_t2
+1     Wales 2021-10-28         1.4152367      1    27    11
+2     Wales 2021-10-27         1.3927010      1    26    10
+3     Wales 2021-10-26         1.3836868      1    25     9
+4     Wales 2021-10-25         1.3836868      1    24     8
+5     Wales 2021-10-24         1.4197438      1    23     7
+6     Wales 2021-10-23         1.4332651      1    22     6
+7     Wales 2021-10-22         1.3836868      1    21     5
+8     Wales 2021-10-21         1.3566441      1    20     4
+9     Wales 2021-10-20         1.3431227      1    19     3
+10    Wales 2021-10-19         1.3070657      1    18     2
+11    Wales 2021-10-18         1.2980515      1    17     1
+12    Wales 2021-10-17         1.2529802     NA    NA    NA
+13    Wales 2021-10-16         1.2529802     NA    NA    NA
+14    Wales 2021-10-15         1.2394589     NA    NA    NA
+15    Wales 2021-10-14         1.2755158     NA    NA    NA
+16    Wales 2021-10-13         1.2665016     NA    NA    NA
+17    Wales 2021-10-12         1.2214304     NA    NA    NA
+18    Wales 2021-10-11         1.1763591     NA    NA    NA
+19    Wales 2021-10-10         1.1718520      0     9     0
+20    Wales 2021-10-09         1.0636811      0     8     0
+21    Wales 2021-10-08         1.0546668      0     7     0
+22    Wales 2021-10-07         0.9780457      0     6     0
+23    Wales 2021-10-06         0.9555101      0     5     0
+24    Wales 2021-10-05         0.9870600      0     4     0
+25    Wales 2021-10-04         0.9960742      0     3     0
+26    Wales 2021-10-03         0.9870600      0     2     0
+27    Wales 2021-10-02         1.0997380      0     1     0
+28    Wales 2021-10-01         1.1222737      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 7440925.911, link = log)
+
+Deviance Residuals: 
+      Min         1Q     Median         3Q        Max  
+-0.307425  -0.022564  -0.009387   0.017206   0.112939  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)
+(Intercept) 0.029043   0.577854   0.050    0.960
+CP_int      0.201784   1.392749   0.145    0.885
+CP_t1       0.002596   0.107877   0.024    0.981
+CP_t2       0.004948   0.135111   0.037    0.971
+
+(Dispersion parameter for Negative Binomial(7440926) family taken to be 1)
+
+    Null deviance: 0.72892  on 20  degrees of freedom
+Residual deviance: 0.23936  on 17  degrees of freedom
+  (7 observations deleted due to missingness)
+AIC: 55.403
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  7440926 
+          Std. Err.:  2190836063 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -45.403 
+               Estimate      2.5 %    97.5 %
+(Intercept) 0.029043103 -1.2717622 1.0280301
+CP_int      0.201784234 -2.4378086 3.1044619
+CP_t1       0.002596308 -0.2126178 0.2182046
+CP_t2       0.004947797 -0.2623464 0.2722630
+            Estimate      2.5 %    97.5 %
+(Intercept) 1.029469 0.28033717  2.795553
+CP_int      1.223584 0.08735207 22.297218
+CP_t1       1.002600 0.80846505  1.243842
+CP_t2       1.004960 0.76924453  1.312932
+ lag Autocorrelation D-W Statistic p-value
+   1       0.6177083      0.730252       0
+ Alternative hypothesis: rho != 0
+   areaName       date smooth_admissions CP_int CP_t1 CP_t2
+1     Wales 2021-10-28         1.4152367      1    27    11
+2     Wales 2021-10-27         1.3927010      1    26    10
+3     Wales 2021-10-26         1.3836868      1    25     9
+4     Wales 2021-10-25         1.3836868      1    24     8
+5     Wales 2021-10-24         1.4197438      1    23     7
+6     Wales 2021-10-23         1.4332651      1    22     6
+7     Wales 2021-10-22         1.3836868      1    21     5
+8     Wales 2021-10-21         1.3566441      1    20     4
+9     Wales 2021-10-20         1.3431227      1    19     3
+10    Wales 2021-10-19         1.3070657      1    18     2
+11    Wales 2021-10-18         1.2980515      1    17     1
+12    Wales 2021-10-17         1.2529802     NA    NA    NA
+13    Wales 2021-10-16         1.2529802     NA    NA    NA
+14    Wales 2021-10-15         1.2394589     NA    NA    NA
+15    Wales 2021-10-14         1.2755158     NA    NA    NA
+16    Wales 2021-10-13         1.2665016     NA    NA    NA
+17    Wales 2021-10-12         1.2214304     NA    NA    NA
+18    Wales 2021-10-11         1.1763591     NA    NA    NA
+19    Wales 2021-10-10         1.1718520      0     9     0
+20    Wales 2021-10-09         1.0636811      0     8     0
+21    Wales 2021-10-08         1.0546668      0     7     0
+22    Wales 2021-10-07         0.9780457      0     6     0
+23    Wales 2021-10-06         0.9555101      0     5     0
+24    Wales 2021-10-05         0.9870600      0     4     0
+25    Wales 2021-10-04         0.9960742      0     3     0
+26    Wales 2021-10-03         0.9870600      0     2     0
+27    Wales 2021-10-02         1.0997380      0     1     0
+28    Wales 2021-10-01         1.1222737      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 7440925.911, link = log)
+
+Deviance Residuals: 
+      Min         1Q     Median         3Q        Max  
+-0.307425  -0.022564  -0.009387   0.017206   0.112939  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)
+(Intercept) 0.029043   0.577854   0.050    0.960
+CP_int      0.201784   1.392749   0.145    0.885
+CP_t1       0.002596   0.107877   0.024    0.981
+CP_t2       0.004948   0.135111   0.037    0.971
+
+(Dispersion parameter for Negative Binomial(7440926) family taken to be 1)
+
+    Null deviance: 0.72892  on 20  degrees of freedom
+Residual deviance: 0.23936  on 17  degrees of freedom
+  (7 observations deleted due to missingness)
+AIC: 55.403
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  7440926 
+          Std. Err.:  2190836063 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -45.403 
+               Estimate      2.5 %    97.5 %
+(Intercept) 0.029043103 -1.2717622 1.0280301
+CP_int      0.201784234 -2.4378086 3.1044619
+CP_t1       0.002596308 -0.2126178 0.2182046
+CP_t2       0.004947797 -0.2623464 0.2722630
+            Estimate      2.5 %    97.5 %
+(Intercept) 1.029469 0.28033717  2.795553
+CP_int      1.223584 0.08735207 22.297218
+CP_t1       1.002600 0.80846505  1.243842
+CP_t2       1.004960 0.76924453  1.312932
+ lag Autocorrelation D-W Statistic p-value
+   1       0.6177083      0.730252   0.002
+ Alternative hypothesis: rho != 0
+   areaName       date smooth_admissions CP_int CP_t1 CP_t2
+1     Wales 2021-10-28         1.4152367      1    27    11
+2     Wales 2021-10-27         1.3927010      1    26    10
+3     Wales 2021-10-26         1.3836868      1    25     9
+4     Wales 2021-10-25         1.3836868      1    24     8
+5     Wales 2021-10-24         1.4197438      1    23     7
+6     Wales 2021-10-23         1.4332651      1    22     6
+7     Wales 2021-10-22         1.3836868      1    21     5
+8     Wales 2021-10-21         1.3566441      1    20     4
+9     Wales 2021-10-20         1.3431227      1    19     3
+10    Wales 2021-10-19         1.3070657      1    18     2
+11    Wales 2021-10-18         1.2980515      1    17     1
+12    Wales 2021-10-17         1.2529802     NA    NA    NA
+13    Wales 2021-10-16         1.2529802     NA    NA    NA
+14    Wales 2021-10-15         1.2394589     NA    NA    NA
+15    Wales 2021-10-14         1.2755158     NA    NA    NA
+16    Wales 2021-10-13         1.2665016     NA    NA    NA
+17    Wales 2021-10-12         1.2214304     NA    NA    NA
+18    Wales 2021-10-11         1.1763591     NA    NA    NA
+19    Wales 2021-10-10         1.1718520      0     9     0
+20    Wales 2021-10-09         1.0636811      0     8     0
+21    Wales 2021-10-08         1.0546668      0     7     0
+22    Wales 2021-10-07         0.9780457      0     6     0
+23    Wales 2021-10-06         0.9555101      0     5     0
+24    Wales 2021-10-05         0.9870600      0     4     0
+25    Wales 2021-10-04         0.9960742      0     3     0
+26    Wales 2021-10-03         0.9870600      0     2     0
+27    Wales 2021-10-02         1.0997380      0     1     0
+28    Wales 2021-10-01         1.1222737      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 7440925.911, link = log)
+
+Deviance Residuals: 
+      Min         1Q     Median         3Q        Max  
+-0.307425  -0.022564  -0.009387   0.017206   0.112939  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)
+(Intercept) 0.029043   0.577854   0.050    0.960
+CP_int      0.201784   1.392749   0.145    0.885
+CP_t1       0.002596   0.107877   0.024    0.981
+CP_t2       0.004948   0.135111   0.037    0.971
+
+(Dispersion parameter for Negative Binomial(7440926) family taken to be 1)
+
+    Null deviance: 0.72892  on 20  degrees of freedom
+Residual deviance: 0.23936  on 17  degrees of freedom
+  (7 observations deleted due to missingness)
+AIC: 55.403
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  7440926 
+          Std. Err.:  2190836063 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -45.403 
+               Estimate      2.5 %    97.5 %
+(Intercept) 0.029043103 -1.2717622 1.0280301
+CP_int      0.201784234 -2.4378086 3.1044619
+CP_t1       0.002596308 -0.2126178 0.2182046
+CP_t2       0.004947797 -0.2623464 0.2722630
+            Estimate      2.5 %    97.5 %
+(Intercept) 1.029469 0.28033717  2.795553
+CP_int      1.223584 0.08735207 22.297218
+CP_t1       1.002600 0.80846505  1.243842
+CP_t2       1.004960 0.76924453  1.312932
+ lag Autocorrelation D-W Statistic p-value
+   1       0.6177083      0.730252       0
+ Alternative hypothesis: rho != 0
+   areaName       date smooth_admissions CP_int CP_t1 CP_t2
+1     Wales 2021-10-28         1.4152367      1    27    11
+2     Wales 2021-10-27         1.3927010      1    26    10
+3     Wales 2021-10-26         1.3836868      1    25     9
+4     Wales 2021-10-25         1.3836868      1    24     8
+5     Wales 2021-10-24         1.4197438      1    23     7
+6     Wales 2021-10-23         1.4332651      1    22     6
+7     Wales 2021-10-22         1.3836868      1    21     5
+8     Wales 2021-10-21         1.3566441      1    20     4
+9     Wales 2021-10-20         1.3431227      1    19     3
+10    Wales 2021-10-19         1.3070657      1    18     2
+11    Wales 2021-10-18         1.2980515      1    17     1
+12    Wales 2021-10-17         1.2529802     NA    NA    NA
+13    Wales 2021-10-16         1.2529802     NA    NA    NA
+14    Wales 2021-10-15         1.2394589     NA    NA    NA
+15    Wales 2021-10-14         1.2755158     NA    NA    NA
+16    Wales 2021-10-13         1.2665016     NA    NA    NA
+17    Wales 2021-10-12         1.2214304     NA    NA    NA
+18    Wales 2021-10-11         1.1763591     NA    NA    NA
+19    Wales 2021-10-10         1.1718520      0     9     0
+20    Wales 2021-10-09         1.0636811      0     8     0
+21    Wales 2021-10-08         1.0546668      0     7     0
+22    Wales 2021-10-07         0.9780457      0     6     0
+23    Wales 2021-10-06         0.9555101      0     5     0
+24    Wales 2021-10-05         0.9870600      0     4     0
+25    Wales 2021-10-04         0.9960742      0     3     0
+26    Wales 2021-10-03         0.9870600      0     2     0
+27    Wales 2021-10-02         1.0997380      0     1     0
+28    Wales 2021-10-01         1.1222737      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 7440925.911, link = log)
+
+Deviance Residuals: 
+      Min         1Q     Median         3Q        Max  
+-0.307425  -0.022564  -0.009387   0.017206   0.112939  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)
+(Intercept) 0.029043   0.577854   0.050    0.960
+CP_int      0.201784   1.392749   0.145    0.885
+CP_t1       0.002596   0.107877   0.024    0.981
+CP_t2       0.004948   0.135111   0.037    0.971
+
+(Dispersion parameter for Negative Binomial(7440926) family taken to be 1)
+
+    Null deviance: 0.72892  on 20  degrees of freedom
+Residual deviance: 0.23936  on 17  degrees of freedom
+  (7 observations deleted due to missingness)
+AIC: 55.403
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  7440926 
+          Std. Err.:  2190836063 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -45.403 
+               Estimate      2.5 %    97.5 %
+(Intercept) 0.029043103 -1.2717622 1.0280301
+CP_int      0.201784234 -2.4378086 3.1044619
+CP_t1       0.002596308 -0.2126178 0.2182046
+CP_t2       0.004947797 -0.2623464 0.2722630
+            Estimate      2.5 %    97.5 %
+(Intercept) 1.029469 0.28033717  2.795553
+CP_int      1.223584 0.08735207 22.297218
+CP_t1       1.002600 0.80846505  1.243842
+CP_t2       1.004960 0.76924453  1.312932
+ lag Autocorrelation D-W Statistic p-value
+   1       0.6177083      0.730252       0
+ Alternative hypothesis: rho != 0

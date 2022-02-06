@@ -1,0 +1,107 @@
+   areaName       date admissions CP_int CP_t1 CP_t2
+1   England 2022-01-13       1916      1    60    23
+2   England 2022-01-12       1955      1    59    22
+3   England 2022-01-11       2127      1    58    21
+4   England 2022-01-10       2180      1    57    20
+5   England 2022-01-09       1975      1    56    19
+6   England 2022-01-08       1862      1    55    18
+7   England 2022-01-07       1772      1    54    17
+8   England 2022-01-06       2043      1    53    16
+9   England 2022-01-05       2139      1    52    15
+10  England 2022-01-04       2101      1    51    14
+11  England 2022-01-03       2219      1    50    13
+12  England 2022-01-02       1881      1    49    12
+13  England 2022-01-01       1819      1    48    11
+14  England 2021-12-31       1781      1    47    10
+15  England 2021-12-30       2114      1    46     9
+16  England 2021-12-29       2370      1    45     8
+17  England 2021-12-28       2082      1    44     7
+18  England 2021-12-27       1751      1    43     6
+19  England 2021-12-26       1374      1    42     5
+20  England 2021-12-25       1281      1    41     4
+21  England 2021-12-24       1020      1    40     3
+22  England 2021-12-23       1252      1    39     2
+23  England 2021-12-22       1246      1    38     1
+24  England 2021-12-21       1098     NA    NA    NA
+25  England 2021-12-20       1061     NA    NA    NA
+26  England 2021-12-19        926     NA    NA    NA
+27  England 2021-12-18        735     NA    NA    NA
+28  England 2021-12-17        743     NA    NA    NA
+29  England 2021-12-16        777     NA    NA    NA
+30  England 2021-12-15        805     NA    NA    NA
+31  England 2021-12-14        815      0    30     0
+32  England 2021-12-13        794      0    29     0
+33  England 2021-12-12        772      0    28     0
+34  England 2021-12-11        696      0    27     0
+35  England 2021-12-10        707      0    26     0
+36  England 2021-12-09        799      0    25     0
+37  England 2021-12-08        754      0    24     0
+38  England 2021-12-07        799      0    23     0
+39  England 2021-12-06        736      0    22     0
+40  England 2021-12-05        728      0    21     0
+41  England 2021-12-04        635      0    20     0
+42  England 2021-12-03        624      0    19     0
+43  England 2021-12-02        719      0    18     0
+44  England 2021-12-01        698      0    17     0
+45  England 2021-11-30        699      0    16     0
+46  England 2021-11-29        669      0    15     0
+47  England 2021-11-28        607      0    14     0
+48  England 2021-11-27        609      0    13     0
+49  England 2021-11-26        620      0    12     0
+50  England 2021-11-25        650      0    11     0
+51  England 2021-11-24        752      0    10     0
+52  England 2021-11-23        659      0     9     0
+53  England 2021-11-22        602      0     8     0
+54  England 2021-11-21        648      0     7     0
+55  England 2021-11-20        611      0     6     0
+56  England 2021-11-19        637      0     5     0
+57  England 2021-11-18        697      0     4     0
+58  England 2021-11-17        727      0     3     0
+59  England 2021-11-16        713      0     2     0
+60  England 2021-11-15        695      0     1     0
+61  England 2021-11-14        678      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 70.39001789, link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-3.0269  -0.8109   0.0663   0.5718   3.0187  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) 6.464743   0.043953 147.083  < 2e-16 ***
+CP_int      0.602680   0.079390   7.591 3.16e-14 ***
+CP_t1       0.005215   0.002512   2.076 0.037879 *  
+CP_t2       0.015389   0.004572   3.366 0.000762 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(70.39) family taken to be 1)
+
+    Null deviance: 917.064  on 53  degrees of freedom
+Residual deviance:  53.122  on 50  degrees of freedom
+  (7 observations deleted due to missingness)
+AIC: 686.91
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  70.4 
+          Std. Err.:  14.3 
+
+ 2 x log-likelihood:  -676.912 
+               Estimate        2.5 %     97.5 %
+(Intercept) 6.464742556 6.3802824661 6.55049325
+CP_int      0.602680069 0.4456773200 0.75978433
+CP_t1       0.005215352 0.0003732303 0.01005771
+CP_t2       0.015388768 0.0061551609 0.02462664
+              Estimate      2.5 %     97.5 %
+(Intercept) 642.099037 590.094366 699.589162
+CP_int        1.827009   1.561548   2.137815
+CP_t1         1.005229   1.000373   1.010108
+CP_t2         1.015508   1.006174   1.024932
+ lag Autocorrelation D-W Statistic p-value
+   1       0.6498569     0.6590475       0
+ Alternative hypothesis: rho != 0

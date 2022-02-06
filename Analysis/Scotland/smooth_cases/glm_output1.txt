@@ -1,0 +1,216 @@
+   areaName       date smooth_cases CP_int CP_t1 CP_t2
+1  Scotland 2021-11-01     49.06957      1    24    10
+2  Scotland 2021-10-31     48.28289      1    23     9
+3  Scotland 2021-10-30     47.41519      1    22     8
+4  Scotland 2021-10-29     47.07543      1    21     7
+5  Scotland 2021-10-28     47.06236      1    20     6
+6  Scotland 2021-10-27     47.71052      1    19     5
+7  Scotland 2021-10-26     47.97972      1    18     4
+8  Scotland 2021-10-25     47.71052      1    17     3
+9  Scotland 2021-10-24     47.81506      1    16     2
+10 Scotland 2021-10-23     48.30903      1    15     1
+11 Scotland 2021-10-22     47.91177     NA    NA    NA
+12 Scotland 2021-10-21     47.00747     NA    NA    NA
+13 Scotland 2021-10-20     46.95520     NA    NA    NA
+14 Scotland 2021-10-19     46.99963     NA    NA    NA
+15 Scotland 2021-10-18     47.32372     NA    NA    NA
+16 Scotland 2021-10-17     47.67916      0     9     0
+17 Scotland 2021-10-16     47.13293      0     8     0
+18 Scotland 2021-10-15     46.75919      0     7     0
+19 Scotland 2021-10-14     46.40113      0     6     0
+20 Scotland 2021-10-13     45.30343      0     5     0
+21 Scotland 2021-10-12     45.25116      0     4     0
+22 Scotland 2021-10-11     44.49584      0     3     0
+23 Scotland 2021-10-10     44.28937      0     2     0
+24 Scotland 2021-10-09     44.30505      0     1     0
+25 Scotland 2021-10-08     44.85390      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 203214563.2, link = log)
+
+Deviance Residuals: 
+      Min         1Q     Median         3Q        Max  
+-0.118186  -0.062747   0.005716   0.031066   0.155664  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  3.782801   0.087960  43.006   <2e-16 ***
+CP_int      -0.036306   0.188640  -0.192    0.847    
+CP_t1        0.008411   0.016298   0.516    0.606    
+CP_t2       -0.007742   0.022781  -0.340    0.734    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(203214563) family taken to be 1)
+
+    Null deviance: 0.89181  on 19  degrees of freedom
+Residual deviance: 0.10787  on 16  degrees of freedom
+  (5 observations deleted due to missingness)
+AIC: 123.82
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  203214563 
+          Std. Err.:  36488574937 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -113.821 
+                Estimate       2.5 %     97.5 %
+(Intercept)  3.782800732  3.60687503 3.95179775
+CP_int      -0.036306393 -0.40432781 0.33540498
+CP_t1        0.008410654 -0.02353282 0.04038304
+CP_t2       -0.007741546 -0.05240847 0.03691166
+              Estimate      2.5 %    97.5 %
+(Intercept) 43.9389307 36.8507153 52.028818
+CP_int       0.9643448  0.6674253  1.398507
+CP_t1        1.0084461  0.9767419  1.041210
+CP_t2        0.9922883  0.9489412  1.037601
+ lag Autocorrelation D-W Statistic p-value
+   1       0.3840678     0.8318214       0
+ Alternative hypothesis: rho != 0
+   areaName       date smooth_cases CP_int CP_t1 CP_t2
+1  Scotland 2021-11-01     49.06957      1    24    10
+2  Scotland 2021-10-31     48.28289      1    23     9
+3  Scotland 2021-10-30     47.41519      1    22     8
+4  Scotland 2021-10-29     47.07543      1    21     7
+5  Scotland 2021-10-28     47.06236      1    20     6
+6  Scotland 2021-10-27     47.71052      1    19     5
+7  Scotland 2021-10-26     47.97972      1    18     4
+8  Scotland 2021-10-25     47.71052      1    17     3
+9  Scotland 2021-10-24     47.81506      1    16     2
+10 Scotland 2021-10-23     48.30903      1    15     1
+11 Scotland 2021-10-22     47.91177     NA    NA    NA
+12 Scotland 2021-10-21     47.00747     NA    NA    NA
+13 Scotland 2021-10-20     46.95520     NA    NA    NA
+14 Scotland 2021-10-19     46.99963     NA    NA    NA
+15 Scotland 2021-10-18     47.32372     NA    NA    NA
+16 Scotland 2021-10-17     47.67916      0     9     0
+17 Scotland 2021-10-16     47.13293      0     8     0
+18 Scotland 2021-10-15     46.75919      0     7     0
+19 Scotland 2021-10-14     46.40113      0     6     0
+20 Scotland 2021-10-13     45.30343      0     5     0
+21 Scotland 2021-10-12     45.25116      0     4     0
+22 Scotland 2021-10-11     44.49584      0     3     0
+23 Scotland 2021-10-10     44.28937      0     2     0
+24 Scotland 2021-10-09     44.30505      0     1     0
+25 Scotland 2021-10-08     44.85390      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 203214563.2, link = log)
+
+Deviance Residuals: 
+      Min         1Q     Median         3Q        Max  
+-0.118186  -0.062747   0.005716   0.031066   0.155664  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  3.782801   0.087960  43.006   <2e-16 ***
+CP_int      -0.036306   0.188640  -0.192    0.847    
+CP_t1        0.008411   0.016298   0.516    0.606    
+CP_t2       -0.007742   0.022781  -0.340    0.734    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(203214563) family taken to be 1)
+
+    Null deviance: 0.89181  on 19  degrees of freedom
+Residual deviance: 0.10787  on 16  degrees of freedom
+  (5 observations deleted due to missingness)
+AIC: 123.82
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  203214563 
+          Std. Err.:  36488574937 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -113.821 
+                Estimate       2.5 %     97.5 %
+(Intercept)  3.782800732  3.60687503 3.95179775
+CP_int      -0.036306393 -0.40432781 0.33540498
+CP_t1        0.008410654 -0.02353282 0.04038304
+CP_t2       -0.007741546 -0.05240847 0.03691166
+              Estimate      2.5 %    97.5 %
+(Intercept) 43.9389307 36.8507153 52.028818
+CP_int       0.9643448  0.6674253  1.398507
+CP_t1        1.0084461  0.9767419  1.041210
+CP_t2        0.9922883  0.9489412  1.037601
+ lag Autocorrelation D-W Statistic p-value
+   1       0.3840678     0.8318214       0
+ Alternative hypothesis: rho != 0
+   areaName       date smooth_cases CP_int CP_t1 CP_t2
+1  Scotland 2021-11-01     49.06957      1    24    10
+2  Scotland 2021-10-31     48.28289      1    23     9
+3  Scotland 2021-10-30     47.41519      1    22     8
+4  Scotland 2021-10-29     47.07543      1    21     7
+5  Scotland 2021-10-28     47.06236      1    20     6
+6  Scotland 2021-10-27     47.71052      1    19     5
+7  Scotland 2021-10-26     47.97972      1    18     4
+8  Scotland 2021-10-25     47.71052      1    17     3
+9  Scotland 2021-10-24     47.81506      1    16     2
+10 Scotland 2021-10-23     48.30903      1    15     1
+11 Scotland 2021-10-22     47.91177     NA    NA    NA
+12 Scotland 2021-10-21     47.00747     NA    NA    NA
+13 Scotland 2021-10-20     46.95520     NA    NA    NA
+14 Scotland 2021-10-19     46.99963     NA    NA    NA
+15 Scotland 2021-10-18     47.32372     NA    NA    NA
+16 Scotland 2021-10-17     47.67916      0     9     0
+17 Scotland 2021-10-16     47.13293      0     8     0
+18 Scotland 2021-10-15     46.75919      0     7     0
+19 Scotland 2021-10-14     46.40113      0     6     0
+20 Scotland 2021-10-13     45.30343      0     5     0
+21 Scotland 2021-10-12     45.25116      0     4     0
+22 Scotland 2021-10-11     44.49584      0     3     0
+23 Scotland 2021-10-10     44.28937      0     2     0
+24 Scotland 2021-10-09     44.30505      0     1     0
+25 Scotland 2021-10-08     44.85390      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 203214563.2, link = log)
+
+Deviance Residuals: 
+      Min         1Q     Median         3Q        Max  
+-0.118186  -0.062747   0.005716   0.031066   0.155664  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  3.782801   0.087960  43.006   <2e-16 ***
+CP_int      -0.036306   0.188640  -0.192    0.847    
+CP_t1        0.008411   0.016298   0.516    0.606    
+CP_t2       -0.007742   0.022781  -0.340    0.734    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(203214563) family taken to be 1)
+
+    Null deviance: 0.89181  on 19  degrees of freedom
+Residual deviance: 0.10787  on 16  degrees of freedom
+  (5 observations deleted due to missingness)
+AIC: 123.82
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  203214563 
+          Std. Err.:  36488574937 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -113.821 
+                Estimate       2.5 %     97.5 %
+(Intercept)  3.782800732  3.60687503 3.95179775
+CP_int      -0.036306393 -0.40432781 0.33540498
+CP_t1        0.008410654 -0.02353282 0.04038304
+CP_t2       -0.007741546 -0.05240847 0.03691166
+              Estimate      2.5 %    97.5 %
+(Intercept) 43.9389307 36.8507153 52.028818
+CP_int       0.9643448  0.6674253  1.398507
+CP_t1        1.0084461  0.9767419  1.041210
+CP_t2        0.9922883  0.9489412  1.037601
+ lag Autocorrelation D-W Statistic p-value
+   1       0.3840678     0.8318214       0
+ Alternative hypothesis: rho != 0

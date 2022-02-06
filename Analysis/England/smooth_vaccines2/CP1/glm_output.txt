@@ -1,0 +1,70 @@
+   areaName       date smooth_vaccines2 CP_int CP_t1 CP_t2
+1   England 2021-12-25         21199.43      1    24    11
+2   England 2021-12-24         24323.00      1    23    10
+3   England 2021-12-23         28032.86      1    22     9
+4   England 2021-12-22         32910.71      1    21     8
+5   England 2021-12-21         38653.00      1    20     7
+6   England 2021-12-20         42103.43      1    19     6
+7   England 2021-12-19         41861.00      1    18     5
+8   England 2021-12-18         39873.14      1    17     4
+9   England 2021-12-17         37678.71      1    16     3
+10  England 2021-12-16         34927.14      1    15     2
+11  England 2021-12-15         33322.00      1    14     1
+12  England 2021-12-14         32314.71      0    13     0
+13  England 2021-12-13         30972.00      0    12     0
+14  England 2021-12-12         29859.71      0    11     0
+15  England 2021-12-11         28675.57      0    10     0
+16  England 2021-12-10         27257.86      0     9     0
+17  England 2021-12-09         26719.00      0     8     0
+18  England 2021-12-08         26143.57      0     7     0
+19  England 2021-12-07         26174.29      0     6     0
+20  England 2021-12-06         25913.57      0     5     0
+21  England 2021-12-05         25496.29      0     4     0
+22  England 2021-12-04         25919.14      0     3     0
+23  England 2021-12-03         26594.43      0     2     0
+24  England 2021-12-02         26734.29      0     1     0
+25  England 2021-12-01         26964.29      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 81.96493497, link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.1175  -0.4304  -0.1106   0.6068   2.0709  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept) 10.134437   0.056099 180.654  < 2e-16 ***
+CP_int       0.393478   0.090880   4.330 1.49e-05 ***
+CP_t1        0.013520   0.007334   1.843   0.0653 .  
+CP_t2       -0.059581   0.012844  -4.639 3.51e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(81.9649) family taken to be 1)
+
+    Null deviance: 67.996  on 24  degrees of freedom
+Residual deviance: 25.045  on 21  degrees of freedom
+AIC: 486.27
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  82.0 
+          Std. Err.:  23.2 
+
+ 2 x log-likelihood:  -476.274 
+               Estimate         2.5 %      97.5 %
+(Intercept) 10.13443732 10.0273353436 10.24424361
+CP_int       0.39347754  0.2104090272  0.57801744
+CP_t1        0.01351967 -0.0005824792  0.02762218
+CP_t2       -0.05958092 -0.0858859658 -0.03327549
+                Estimate        2.5 %       97.5 %
+(Intercept) 2.519592e+04 2.263687e+04 2.812020e+04
+CP_int      1.482126e+00 1.234183e+00 1.782501e+00
+CP_t1       1.013611e+00 9.994177e-01 1.028007e+00
+CP_t2       9.421593e-01 9.176989e-01 9.672721e-01
+ lag Autocorrelation D-W Statistic p-value
+   1       0.5945226     0.6284132       0
+ Alternative hypothesis: rho != 0

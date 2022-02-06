@@ -1,0 +1,83 @@
+   country                indicator       date smooth_admissions CP_int CP_t1 CP_t2
+1   France Daily hospital occupancy 2021-07-26          7013.143      0     0     0
+2   France Daily hospital occupancy 2021-07-27          7093.286      0     1     0
+3   France Daily hospital occupancy 2021-07-28          7182.143      0     2     0
+4   France Daily hospital occupancy 2021-07-29          7287.571      0     3     0
+5   France Daily hospital occupancy 2021-07-30          7396.286      0     4     0
+6   France Daily hospital occupancy 2021-07-31          7515.857      0     5     0
+7   France Daily hospital occupancy 2021-08-01          7648.143      0     6     0
+8   France Daily hospital occupancy 2021-08-02          7787.286      0     7     0
+9   France Daily hospital occupancy 2021-08-03          7930.857      0     8     0
+10  France Daily hospital occupancy 2021-08-04          8076.000      0     9     0
+11  France Daily hospital occupancy 2021-08-05          8233.714      0    10     0
+12  France Daily hospital occupancy 2021-08-06          8402.571      0    11     0
+13  France Daily hospital occupancy 2021-08-07          8571.000      0    12     0
+14  France Daily hospital occupancy 2021-08-08          8728.000      0    13     0
+15  France Daily hospital occupancy 2021-08-09          8907.286     NA    NA    NA
+16  France Daily hospital occupancy 2021-08-10          9075.571     NA    NA    NA
+17  France Daily hospital occupancy 2021-08-11          9250.286     NA    NA    NA
+18  France Daily hospital occupancy 2021-08-12          9409.286     NA    NA    NA
+19  France Daily hospital occupancy 2021-08-13          9570.571     NA    NA    NA
+20  France Daily hospital occupancy 2021-08-14          9722.857     NA    NA    NA
+21  France Daily hospital occupancy 2021-08-15          9880.429     NA    NA    NA
+22  France Daily hospital occupancy 2021-08-16         10012.857      1    21     1
+23  France Daily hospital occupancy 2021-08-17         10151.286      1    22     2
+24  France Daily hospital occupancy 2021-08-18         10267.714      1    23     3
+25  France Daily hospital occupancy 2021-08-19         10389.571      1    24     4
+26  France Daily hospital occupancy 2021-08-20         10511.857      1    25     5
+27  France Daily hospital occupancy 2021-08-21         10632.857      1    26     6
+28  France Daily hospital occupancy 2021-08-22         10752.143      1    27     7
+29  France Daily hospital occupancy 2021-08-23         10853.857      1    28     8
+30  France Daily hospital occupancy 2021-08-24         10946.286      1    29     9
+31  France Daily hospital occupancy 2021-08-25         11030.429      1    30    10
+32  France Daily hospital occupancy 2021-08-26         11093.429      1    31    11
+33  France Daily hospital occupancy 2021-08-27         11127.429      1    32    12
+34  France Daily hospital occupancy 2021-08-28         11135.143      1    33    13
+35  France Daily hospital occupancy 2021-08-29         11127.714      1    34    14
+36  France Daily hospital occupancy 2021-08-30         11103.429      1    35    15
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 228744465.6, link = log)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-2.23239  -0.42153  -0.06785   0.54429   1.20634  
+
+Coefficients:
+              Estimate Std. Error  z value Pr(>|z|)    
+(Intercept)  8.8443417  0.0059369 1489.732   <2e-16 ***
+CP_int       0.0296871  0.0116857    2.540   0.0111 *  
+CP_t1        0.0172398  0.0007530   22.896   <2e-16 ***
+CP_t2       -0.0094202  0.0009485   -9.932   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(227632759) family taken to be 1)
+
+    Null deviance: 7626.045  on 28  degrees of freedom
+Residual deviance:   19.254  on 25  degrees of freedom
+  (7 observations deleted due to missingness)
+AIC: 347.16
+
+Number of Fisher Scoring iterations: 2
+
+
+              Theta:  228744466 
+          Std. Err.:  7107392988 
+Warning while fitting theta: alternation limit reached 
+
+ 2 x log-likelihood:  -337.163 
+                Estimate        2.5 %       97.5 %
+(Intercept)  8.844341716  8.832690429  8.855962560
+CP_int       0.029687113  0.006793439  0.052600541
+CP_t1        0.017239849  0.015764201  0.018715743
+CP_t2       -0.009420178 -0.011279267 -0.007561216
+                Estimate        2.5 %       97.5 %
+(Intercept) 6935.0373319 6854.7041266 7016.0984098
+CP_int         1.0301322    1.0068166    1.0540085
+CP_t1          1.0173893    1.0158891    1.0188920
+CP_t2          0.9906241    0.9887841    0.9924673
+ lag Autocorrelation D-W Statistic p-value
+   1        0.619497     0.4566531       0
+ Alternative hypothesis: rho != 0

@@ -1,0 +1,91 @@
+   areaName       date vaccines1 CP_int CP_t1 CP_t2
+1     Wales 2021-12-10       427      1    45    26
+2     Wales 2021-12-09       513      1    44    25
+3     Wales 2021-12-08       579      1    43    24
+4     Wales 2021-12-07       433      1    42    23
+5     Wales 2021-12-06       413      1    41    22
+6     Wales 2021-12-05       833      1    40    21
+7     Wales 2021-12-04      1235      1    39    20
+8     Wales 2021-12-03       436      1    38    19
+9     Wales 2021-12-02       428      1    37    18
+10    Wales 2021-12-01       588      1    36    17
+11    Wales 2021-11-30       483      1    35    16
+12    Wales 2021-11-29       399      1    34    15
+13    Wales 2021-11-28       507      1    33    14
+14    Wales 2021-11-27      1504      1    32    13
+15    Wales 2021-11-26       381      1    31    12
+16    Wales 2021-11-25       381      1    30    11
+17    Wales 2021-11-24       379      1    29    10
+18    Wales 2021-11-23       604      1    28     9
+19    Wales 2021-11-22       358      1    27     8
+20    Wales 2021-11-21       845      1    26     7
+21    Wales 2021-11-20      1019      1    25     6
+22    Wales 2021-11-19       481      1    24     5
+23    Wales 2021-11-18       838      1    23     4
+24    Wales 2021-11-17       489      1    22     3
+25    Wales 2021-11-16       966      1    21     2
+26    Wales 2021-11-15       888      1    20     1
+27    Wales 2021-11-14       637      0    19     0
+28    Wales 2021-11-13      1721      0    18     0
+29    Wales 2021-11-12       780      0    17     0
+30    Wales 2021-11-11       554      0    16     0
+31    Wales 2021-11-10       742      0    15     0
+32    Wales 2021-11-09       858      0    14     0
+33    Wales 2021-11-08       918      0    13     0
+34    Wales 2021-11-07      1127      0    12     0
+35    Wales 2021-11-06      1703      0    11     0
+36    Wales 2021-11-05       776      0    10     0
+37    Wales 2021-11-04       675      0     9     0
+38    Wales 2021-11-03       720      0     8     0
+39    Wales 2021-11-02      1054      0     7     0
+40    Wales 2021-11-01       992      0     6     0
+41    Wales 2021-10-31      2661      0     5     0
+42    Wales 2021-10-30      2289      0     4     0
+43    Wales 2021-10-29      1781      0     3     0
+44    Wales 2021-10-28      1612      0     2     0
+45    Wales 2021-10-27      1699      0     1     0
+46    Wales 2021-10-26      2440      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 6.713955891, link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.4850  -0.8937  -0.3152   0.4487   2.6137  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  7.59206    0.16668  45.549  < 2e-16 ***
+CP_int      -0.00654    0.22889  -0.029 0.977205    
+CP_t1       -0.05030    0.01501  -3.351 0.000805 ***
+CP_t2        0.03637    0.01812   2.007 0.044709 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(6.714) family taken to be 1)
+
+    Null deviance: 99.902  on 45  degrees of freedom
+Residual deviance: 47.095  on 42  degrees of freedom
+AIC: 668.11
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  6.71 
+          Std. Err.:  1.38 
+
+ 2 x log-likelihood:  -658.105 
+                Estimate       2.5 %      97.5 %
+(Intercept)  7.592063552  7.28779792  7.91902456
+CP_int      -0.006539998 -0.44730267  0.43132306
+CP_t1       -0.050298894 -0.07831778 -0.02223044
+CP_t2        0.036368194  0.00209477  0.07058526
+                Estimate        2.5 %       97.5 %
+(Intercept) 1982.4000820 1462.3469489 2749.0881581
+CP_int         0.9934813    0.6393504    1.5392928
+CP_t1          0.9509452    0.9246705    0.9780148
+CP_t2          1.0370376    1.0020970    1.0731361
+ lag Autocorrelation D-W Statistic p-value
+   1      0.05907391      1.869439       0
+ Alternative hypothesis: rho != 0

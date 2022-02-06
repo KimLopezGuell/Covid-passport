@@ -1,0 +1,70 @@
+   areaName       date vaccines3 CP_int CP_t1 CP_t2
+1   England 2021-12-25     10477      1    24    11
+2   England 2021-12-24    153690      1    23    10
+3   England 2021-12-23    493033      1    22     9
+4   England 2021-12-22    695273      1    21     8
+5   England 2021-12-21    809192      1    20     7
+6   England 2021-12-20    753793      1    19     6
+7   England 2021-12-19    726195      1    18     5
+8   England 2021-12-18    830403      1    17     4
+9   England 2021-12-17    740775      1    16     3
+10  England 2021-12-16    739867      1    15     2
+11  England 2021-12-15    626846      1    14     1
+12  England 2021-12-14    548039      0    13     0
+13  England 2021-12-13    418544      0    12     0
+14  England 2021-12-12    333866      0    11     0
+15  England 2021-12-11    483361      0    10     0
+16  England 2021-12-10    362502      0     9     0
+17  England 2021-12-09    396278      0     8     0
+18  England 2021-12-08    340615      0     7     0
+19  England 2021-12-07    319214      0     6     0
+20  England 2021-12-06    268062      0     5     0
+21  England 2021-12-05    221674      0     4     0
+22  England 2021-12-04    412755      0     3     0
+23  England 2021-12-03    332834      0     2     0
+24  England 2021-12-02    353104      0     1     0
+25  England 2021-12-01    341121      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 3.879185737, link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-4.1885  -0.4036   0.0710   0.3776   1.1316  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) 12.62375    0.25747  49.031  < 2e-16 ***
+CP_int       1.14459    0.41724   2.743  0.00608 ** 
+CP_t1        0.02790    0.03366   0.829  0.40719    
+CP_t2       -0.17814    0.05896  -3.021  0.00252 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(3.8792) family taken to be 1)
+
+    Null deviance: 38.738  on 24  degrees of freedom
+Residual deviance: 26.068  on 21  degrees of freedom
+AIC: 692.07
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  3.88 
+          Std. Err.:  1.05 
+
+ 2 x log-likelihood:  -682.071 
+               Estimate       2.5 %      97.5 %
+(Intercept) 12.62375086 12.16040545 13.14428643
+CP_int       1.14458638  0.24433969  2.10186162
+CP_t1        0.02790051 -0.03575339  0.09152699
+CP_t2       -0.17814028 -0.31628500 -0.04311799
+                Estimate        2.5 %       97.5 %
+(Intercept) 3.036864e+05 1.910720e+05 5.110826e+05
+CP_int      3.141142e+00 1.276778e+00 8.181386e+00
+CP_t1       1.028293e+00 9.648782e-01 1.095846e+00
+CP_t2       8.368250e-01 7.288517e-01 9.577984e-01
+ lag Autocorrelation D-W Statistic p-value
+   1       0.2886105     0.7477098       0
+ Alternative hypothesis: rho != 0

@@ -1,0 +1,66 @@
+   admissions NPI1 t1 t2
+1         371    0  0  0
+2         369    0  1  0
+3         362    0  2  0
+4         378    0  3  0
+5         386    0  4  0
+6         414    0  5  0
+7         438    0  6  0
+8         444    0  7  0
+9         435    0  8  0
+10        411    0  9  0
+11        426   NA NA NA
+12        418   NA NA NA
+13        435   NA NA NA
+14        446   NA NA NA
+15        433   NA NA NA
+16        439   NA NA NA
+17        427   NA NA NA
+18        449    1 17  1
+19        434    1 18  2
+20        447    1 19  3
+21        486    1 20  4
+22        465    1 21  5
+23        461    1 22  6
+24        460    1 23  7
+25        472    1 24  8
+26        455    1 25  9
+27        468    1 26 10
+28        480    1 27 11
+29        490    1 28 12
+30        508    1 29 13
+31        517    1 30 14
+Series: dataset[, output] 
+Regression with ARIMA(0,0,1) errors 
+
+Coefficients:
+         ma1  intercept      NPI1      t1       t2
+      0.5181   364.7870  -51.6573  7.7717  -3.2286
+s.e.  0.1638    10.5843   25.4132  1.9487   2.2923
+
+sigma^2 estimated as 152:  log likelihood=-95.62
+AIC=203.24   AICc=206.74   BIC=211.84
+
+Training set error measures:
+                    ME     RMSE      MAE        MPE     MAPE      MASE       ACF1
+Training set -0.186248 12.83414 10.18112 -0.1354167 2.324065 0.7413438 0.06454869
+
+z test of coefficients:
+
+           Estimate Std. Error z value  Pr(>|z|)    
+ma1         0.51813    0.16385  3.1623  0.001565 ** 
+intercept 364.78696   10.58432 34.4649 < 2.2e-16 ***
+NPI1      -51.65733   25.41317 -2.0327  0.042083 *  
+t1          7.77170    1.94871  3.9881  6.66e-05 ***
+t2         -3.22863    2.29229 -1.4085  0.158992    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+	Ljung-Box test
+
+data:  Residuals from Regression with ARIMA(0,0,1) errors
+Q* = 12.583, df = 3, p-value = 0.005631
+
+Model df: 5.   Total lags used: 8
+

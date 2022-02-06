@@ -1,0 +1,98 @@
+   country                indicator       date smooth_admissions CP_int CP_t1 CP_t2
+1   France Daily hospital occupancy 2021-08-14          9722.857      0     0     0
+2   France Daily hospital occupancy 2021-08-15          9880.429      0     1     0
+3   France Daily hospital occupancy 2021-08-16         10012.857      0     2     0
+4   France Daily hospital occupancy 2021-08-17         10151.286      0     3     0
+5   France Daily hospital occupancy 2021-08-18         10267.714      0     4     0
+6   France Daily hospital occupancy 2021-08-19         10389.571      0     5     0
+7   France Daily hospital occupancy 2021-08-20         10511.857      0     6     0
+8   France Daily hospital occupancy 2021-08-21         10632.857      0     7     0
+9   France Daily hospital occupancy 2021-08-22         10752.143      0     8     0
+10  France Daily hospital occupancy 2021-08-23         10853.857      0     9     0
+11  France Daily hospital occupancy 2021-08-24         10946.286      0    10     0
+12  France Daily hospital occupancy 2021-08-25         11030.429      0    11     0
+13  France Daily hospital occupancy 2021-08-26         11093.429      0    12     0
+14  France Daily hospital occupancy 2021-08-27         11127.429      0    13     0
+15  France Daily hospital occupancy 2021-08-28         11135.143      0    14     0
+16  France Daily hospital occupancy 2021-08-29         11127.714      0    15     0
+17  France Daily hospital occupancy 2021-08-30         11103.429     NA    NA    NA
+18  France Daily hospital occupancy 2021-08-31         11054.000     NA    NA    NA
+19  France Daily hospital occupancy 2021-09-01         10997.143     NA    NA    NA
+20  France Daily hospital occupancy 2021-09-02         10933.143     NA    NA    NA
+21  France Daily hospital occupancy 2021-09-03         10863.429     NA    NA    NA
+22  France Daily hospital occupancy 2021-09-04         10795.714     NA    NA    NA
+23  France Daily hospital occupancy 2021-09-05         10698.429     NA    NA    NA
+24  France Daily hospital occupancy 2021-09-06         10611.143      1    23     1
+25  France Daily hospital occupancy 2021-09-07         10511.000      1    24     2
+26  France Daily hospital occupancy 2021-09-08         10420.143      1    25     3
+27  France Daily hospital occupancy 2021-09-09         10329.857      1    26     4
+28  France Daily hospital occupancy 2021-09-10         10219.714      1    27     5
+29  France Daily hospital occupancy 2021-09-11         10090.143      1    28     6
+30  France Daily hospital occupancy 2021-09-12          9964.000      1    29     7
+31  France Daily hospital occupancy 2021-09-13          9817.429      1    30     8
+32  France Daily hospital occupancy 2021-09-14          9668.143      1    31     9
+33  France Daily hospital occupancy 2021-09-15          9510.143      1    32    10
+34  France Daily hospital occupancy 2021-09-16          9349.429      1    33    11
+35  France Daily hospital occupancy 2021-09-17          9186.429      1    34    12
+36  France Daily hospital occupancy 2021-09-18          9022.857      1    35    13
+37  France Daily hospital occupancy 2021-09-19          8859.857      1    36    14
+38  France Daily hospital occupancy 2021-09-20          8708.429      1    37    15
+39  France Daily hospital occupancy 2021-09-21          8570.857      1    38    16
+40  France Daily hospital occupancy 2021-09-22          8437.714      1    39    17
+41  France Daily hospital occupancy 2021-09-23          8310.143      1    40    18
+42  France Daily hospital occupancy 2021-09-24          8186.571      1    41    19
+43  France Daily hospital occupancy 2021-09-25          8073.286      1    42    20
+44  France Daily hospital occupancy 2021-09-26          7975.000      1    43    21
+45  France Daily hospital occupancy 2021-09-27          7879.000      1    44    22
+46  France Daily hospital occupancy 2021-09-28          7779.429      1    45    23
+47  France Daily hospital occupancy 2021-09-29          7681.429      1    46    24
+48  France Daily hospital occupancy 2021-09-30          7583.429      1    47    25
+49  France Daily hospital occupancy 2021-10-01          7486.143      1    48    26
+50  France Daily hospital occupancy 2021-10-02          7385.429      1    49    27
+51  France Daily hospital occupancy 2021-10-03          7287.143      1    50    28
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 242423954.5, link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.2050  -0.5968   0.1316   0.6495   1.0772  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  9.197759   0.004728 1945.28   <2e-16 ***
+CP_int      -0.104072   0.008838  -11.78   <2e-16 ***
+CP_t1        0.009351   0.000527   17.74   <2e-16 ***
+CP_t2       -0.024101   0.000583  -41.34   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(247953254) family taken to be 1)
+
+    Null deviance: 6955.632  on 43  degrees of freedom
+Residual deviance:   28.562  on 40  degrees of freedom
+  (7 observations deleted due to missingness)
+AIC: 522.11
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  242423955 
+          Std. Err.:  5804779319 
+Warning while fitting theta: alternation limit reached 
+
+ 2 x log-likelihood:  -512.11 
+               Estimate       2.5 %      97.5 %
+(Intercept)  9.19775868  9.18848191  9.20701629
+CP_int      -0.10407167 -0.12138620 -0.08674332
+CP_t1        0.00935108  0.00831821  0.01038403
+CP_t2       -0.02410141 -0.02524402 -0.02295888
+                Estimate        2.5 %       97.5 %
+(Intercept) 9874.9712482 9783.7870040 9966.8143886
+CP_int         0.9011607    0.8856918    0.9169124
+CP_t1          1.0093949    1.0083529    1.0104381
+CP_t2          0.9761867    0.9750719    0.9773027
+ lag Autocorrelation D-W Statistic p-value
+   1       0.8455723     0.2122126       0
+ Alternative hypothesis: rho != 0

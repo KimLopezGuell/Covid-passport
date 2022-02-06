@@ -1,0 +1,76 @@
+   Entity       date vaccines CP_int CP_t1 CP_t2
+1  France 2021-07-09   572972      0     0     0
+2  France 2021-07-10   569760      0     1     0
+3  France 2021-07-11   565794      0     2     0
+4  France 2021-07-12   574402      0     3     0
+5  France 2021-07-13   594942      0     4     0
+6  France 2021-07-14   550099      0     5     0
+7  France 2021-07-15   577719      0     6     0
+8  France 2021-07-16   597365      0     7     0
+9  France 2021-07-17   610444      0     8     0
+10 France 2021-07-18   618232      0     9     0
+11 France 2021-07-19   627317      0    10     0
+12 France 2021-07-20   629411      0    11     0
+13 France 2021-07-21   695981      1    12     1
+14 France 2021-07-22   693088      1    13     2
+15 France 2021-07-23   691018      1    14     3
+16 France 2021-07-24   687555      1    15     4
+17 France 2021-07-25   684200      1    16     5
+18 France 2021-07-26   678546      1    17     6
+19 France 2021-07-27   672055      1    18     7
+20 France 2021-07-28   664258      1    19     8
+21 France 2021-07-29   655257      1    20     9
+22 France 2021-07-30   641383      1    21    10
+23 France 2021-07-31   629274      1    22    11
+24 France 2021-08-01   623660      1    23    12
+25 France 2021-08-02   609822      1    24    13
+26 France 2021-08-03   589479      1    25    14
+27 France 2021-08-04   567374      1    26    15
+28 France 2021-08-05   542850      1    27    16
+29 France 2021-08-06   523844      1    28    17
+30 France 2021-08-07   512485      1    29    18
+31 France 2021-08-08   509159      1    30    19
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 1229.743956, link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.2721  -0.8443   0.2912   0.7963   1.4155  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept) 13.233059   0.015502 853.659  < 2e-16 ***
+CP_int       0.181243   0.020641   8.781  < 2e-16 ***
+CP_t1        0.010073   0.002387   4.220 2.45e-05 ***
+CP_t2       -0.028563   0.002670 -10.698  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(1229.744) family taken to be 1)
+
+    Null deviance: 309.961  on 30  degrees of freedom
+Residual deviance:  31.005  on 27  degrees of freedom
+AIC: 703.32
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  1230 
+          Std. Err.:  313 
+
+ 2 x log-likelihood:  -693.32 
+               Estimate       2.5 %      97.5 %
+(Intercept) 13.23305940 13.20290768 13.26342216
+CP_int       0.18124298  0.14066927  0.22176132
+CP_t1        0.01007286  0.00542105  0.01472460
+CP_t2       -0.02856263 -0.03378548 -0.02333972
+                Estimate        2.5 %       97.5 %
+(Intercept) 5.585276e+05 5.419384e+05 5.757462e+05
+CP_int      1.198706e+00 1.151044e+00 1.248273e+00
+CP_t1       1.010124e+00 1.005436e+00 1.014834e+00
+CP_t2       9.718414e-01 9.667789e-01 9.769305e-01
+ lag Autocorrelation D-W Statistic p-value
+   1       0.6122099     0.7062077       0
+ Alternative hypothesis: rho != 0

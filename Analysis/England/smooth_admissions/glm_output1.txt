@@ -1,0 +1,318 @@
+   areaName       date smooth_admissions CP_int CP_t1 CP_t2
+1   England 2022-01-13          3.345198      1    60    23
+2   England 2022-01-12          3.397491      1    59    22
+3   England 2022-01-11          3.462667      1    58    21
+4   England 2022-01-10          3.482876      1    57    20
+5   England 2022-01-09          3.514959      1    56    19
+6   England 2022-01-08          3.561441      1    55    18
+7   England 2022-01-07          3.554873      1    54    17
+8   England 2022-01-06          3.564725      1    53    16
+9   England 2022-01-05          3.540979      1    52    15
+10  England 2022-01-04          3.530116      1    51    14
+11  England 2022-01-03          3.532390      1    50    13
+12  England 2022-01-02          3.550326      1    49    12
+13  England 2022-01-01          3.608681      1    48    11
+14  England 2021-12-31          3.603882      1    47    10
+15  England 2021-12-30          3.485655      1    46     9
+16  England 2021-12-29          3.357577      1    45     8
+17  England 2021-12-28          3.221667      1    44     7
+18  England 2021-12-27          3.029423      1    43     6
+19  England 2021-12-26          2.811664      1    42     5
+20  England 2021-12-25          2.527719      1    41     4
+21  England 2021-12-24          2.279141      1    40     3
+22  England 2021-12-23          2.104833      1    39     2
+23  England 2021-12-22          1.991659      1    38     1
+24  England 2021-12-21          1.853728     NA    NA    NA
+25  England 2021-12-20          1.783752     NA    NA    NA
+26  England 2021-12-19          1.663757     NA    NA    NA
+27  England 2021-12-18          1.552352     NA    NA    NA
+28  England 2021-12-17          1.480860     NA    NA    NA
+29  England 2021-12-16          1.413411     NA    NA    NA
+30  England 2021-12-15          1.374507     NA    NA    NA
+31  England 2021-12-14          1.364655      0    30     0
+32  England 2021-12-13          1.355561      0    29     0
+33  England 2021-12-12          1.361118      0    28     0
+34  England 2021-12-11          1.348235      0    27     0
+35  England 2021-12-10          1.344193      0    26     0
+36  England 2021-12-09          1.329541      0    25     0
+37  England 2021-12-08          1.318425      0    24     0
+38  England 2021-12-07          1.303016      0    23     0
+39  England 2021-12-06          1.282048      0    22     0
+40  England 2021-12-05          1.261839      0    21     0
+41  England 2021-12-04          1.247692      0    20     0
+42  England 2021-12-03          1.222430      0    19     0
+43  England 2021-12-02          1.205504      0    18     0
+44  England 2021-12-01          1.174937      0    17     0
+45  England 2021-11-30          1.168369      0    16     0
+46  England 2021-11-29          1.167359      0    15     0
+47  England 2021-11-28          1.149928      0    14     0
+48  England 2021-11-27          1.163569      0    13     0
+49  England 2021-11-26          1.153464      0    12     0
+50  England 2021-11-25          1.136539      0    11     0
+51  England 2021-11-24          1.146896      0    10     0
+52  England 2021-11-23          1.147402      0     9     0
+53  England 2021-11-22          1.151696      0     8     0
+54  England 2021-11-21          1.163569      0     7     0
+55  England 2021-11-20          1.157254      0     6     0
+56  England 2021-11-19          1.170895      0     5     0
+57  England 2021-11-18          1.194389      0     4     0
+58  England 2021-11-17          1.201968      0     3     0
+59  England 2021-11-16          1.213083      0     2     0
+60  England 2021-11-15          1.236324      0     1     0
+61  England 2021-11-14          1.261586      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 2498279.334, link = log)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-0.41753  -0.05199   0.00421   0.05453   0.28536  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)
+(Intercept) 0.129792   0.322748   0.402    0.688
+CP_int      0.637433   0.493317   1.292    0.196
+CP_t1       0.005034   0.018123   0.278    0.781
+CP_t2       0.012400   0.025255   0.491    0.623
+
+(Dispersion parameter for Negative Binomial(2498279) family taken to be 1)
+
+    Null deviance: 27.0370  on 53  degrees of freedom
+Residual deviance:  1.0187  on 50  degrees of freedom
+  (7 observations deleted due to missingness)
+AIC: 148.53
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  2498279 
+          Std. Err.:  205572408 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -138.527 
+               Estimate       2.5 %     97.5 %
+(Intercept) 0.129792203 -0.54865689 0.72173019
+CP_int      0.637432549 -0.30763995 1.63444388
+CP_t1       0.005034182 -0.03056420 0.04083668
+CP_t2       0.012400230 -0.03716068 0.06203187
+            Estimate     2.5 %   97.5 %
+(Intercept) 1.138592 0.5777252 2.057991
+CP_int      1.891618 0.7351800 5.126606
+CP_t1       1.005047 0.9698982 1.041682
+CP_t2       1.012477 0.9635213 1.063996
+ lag Autocorrelation D-W Statistic p-value
+   1       0.8066455     0.2995914       0
+ Alternative hypothesis: rho != 0
+   areaName       date smooth_admissions CP_int CP_t1 CP_t2
+1   England 2022-01-13          3.345198      1    60    23
+2   England 2022-01-12          3.397491      1    59    22
+3   England 2022-01-11          3.462667      1    58    21
+4   England 2022-01-10          3.482876      1    57    20
+5   England 2022-01-09          3.514959      1    56    19
+6   England 2022-01-08          3.561441      1    55    18
+7   England 2022-01-07          3.554873      1    54    17
+8   England 2022-01-06          3.564725      1    53    16
+9   England 2022-01-05          3.540979      1    52    15
+10  England 2022-01-04          3.530116      1    51    14
+11  England 2022-01-03          3.532390      1    50    13
+12  England 2022-01-02          3.550326      1    49    12
+13  England 2022-01-01          3.608681      1    48    11
+14  England 2021-12-31          3.603882      1    47    10
+15  England 2021-12-30          3.485655      1    46     9
+16  England 2021-12-29          3.357577      1    45     8
+17  England 2021-12-28          3.221667      1    44     7
+18  England 2021-12-27          3.029423      1    43     6
+19  England 2021-12-26          2.811664      1    42     5
+20  England 2021-12-25          2.527719      1    41     4
+21  England 2021-12-24          2.279141      1    40     3
+22  England 2021-12-23          2.104833      1    39     2
+23  England 2021-12-22          1.991659      1    38     1
+24  England 2021-12-21          1.853728     NA    NA    NA
+25  England 2021-12-20          1.783752     NA    NA    NA
+26  England 2021-12-19          1.663757     NA    NA    NA
+27  England 2021-12-18          1.552352     NA    NA    NA
+28  England 2021-12-17          1.480860     NA    NA    NA
+29  England 2021-12-16          1.413411     NA    NA    NA
+30  England 2021-12-15          1.374507     NA    NA    NA
+31  England 2021-12-14          1.364655      0    30     0
+32  England 2021-12-13          1.355561      0    29     0
+33  England 2021-12-12          1.361118      0    28     0
+34  England 2021-12-11          1.348235      0    27     0
+35  England 2021-12-10          1.344193      0    26     0
+36  England 2021-12-09          1.329541      0    25     0
+37  England 2021-12-08          1.318425      0    24     0
+38  England 2021-12-07          1.303016      0    23     0
+39  England 2021-12-06          1.282048      0    22     0
+40  England 2021-12-05          1.261839      0    21     0
+41  England 2021-12-04          1.247692      0    20     0
+42  England 2021-12-03          1.222430      0    19     0
+43  England 2021-12-02          1.205504      0    18     0
+44  England 2021-12-01          1.174937      0    17     0
+45  England 2021-11-30          1.168369      0    16     0
+46  England 2021-11-29          1.167359      0    15     0
+47  England 2021-11-28          1.149928      0    14     0
+48  England 2021-11-27          1.163569      0    13     0
+49  England 2021-11-26          1.153464      0    12     0
+50  England 2021-11-25          1.136539      0    11     0
+51  England 2021-11-24          1.146896      0    10     0
+52  England 2021-11-23          1.147402      0     9     0
+53  England 2021-11-22          1.151696      0     8     0
+54  England 2021-11-21          1.163569      0     7     0
+55  England 2021-11-20          1.157254      0     6     0
+56  England 2021-11-19          1.170895      0     5     0
+57  England 2021-11-18          1.194389      0     4     0
+58  England 2021-11-17          1.201968      0     3     0
+59  England 2021-11-16          1.213083      0     2     0
+60  England 2021-11-15          1.236324      0     1     0
+61  England 2021-11-14          1.261586      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 2498279.334, link = log)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-0.41753  -0.05199   0.00421   0.05453   0.28536  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)
+(Intercept) 0.129792   0.322748   0.402    0.688
+CP_int      0.637433   0.493317   1.292    0.196
+CP_t1       0.005034   0.018123   0.278    0.781
+CP_t2       0.012400   0.025255   0.491    0.623
+
+(Dispersion parameter for Negative Binomial(2498279) family taken to be 1)
+
+    Null deviance: 27.0370  on 53  degrees of freedom
+Residual deviance:  1.0187  on 50  degrees of freedom
+  (7 observations deleted due to missingness)
+AIC: 148.53
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  2498279 
+          Std. Err.:  205572408 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -138.527 
+               Estimate       2.5 %     97.5 %
+(Intercept) 0.129792203 -0.54865689 0.72173019
+CP_int      0.637432549 -0.30763995 1.63444388
+CP_t1       0.005034182 -0.03056420 0.04083668
+CP_t2       0.012400230 -0.03716068 0.06203187
+            Estimate     2.5 %   97.5 %
+(Intercept) 1.138592 0.5777252 2.057991
+CP_int      1.891618 0.7351800 5.126606
+CP_t1       1.005047 0.9698982 1.041682
+CP_t2       1.012477 0.9635213 1.063996
+ lag Autocorrelation D-W Statistic p-value
+   1       0.8066455     0.2995914       0
+ Alternative hypothesis: rho != 0
+   areaName       date smooth_admissions CP_int CP_t1 CP_t2
+1   England 2022-01-13          3.345198      1    60    23
+2   England 2022-01-12          3.397491      1    59    22
+3   England 2022-01-11          3.462667      1    58    21
+4   England 2022-01-10          3.482876      1    57    20
+5   England 2022-01-09          3.514959      1    56    19
+6   England 2022-01-08          3.561441      1    55    18
+7   England 2022-01-07          3.554873      1    54    17
+8   England 2022-01-06          3.564725      1    53    16
+9   England 2022-01-05          3.540979      1    52    15
+10  England 2022-01-04          3.530116      1    51    14
+11  England 2022-01-03          3.532390      1    50    13
+12  England 2022-01-02          3.550326      1    49    12
+13  England 2022-01-01          3.608681      1    48    11
+14  England 2021-12-31          3.603882      1    47    10
+15  England 2021-12-30          3.485655      1    46     9
+16  England 2021-12-29          3.357577      1    45     8
+17  England 2021-12-28          3.221667      1    44     7
+18  England 2021-12-27          3.029423      1    43     6
+19  England 2021-12-26          2.811664      1    42     5
+20  England 2021-12-25          2.527719      1    41     4
+21  England 2021-12-24          2.279141      1    40     3
+22  England 2021-12-23          2.104833      1    39     2
+23  England 2021-12-22          1.991659      1    38     1
+24  England 2021-12-21          1.853728     NA    NA    NA
+25  England 2021-12-20          1.783752     NA    NA    NA
+26  England 2021-12-19          1.663757     NA    NA    NA
+27  England 2021-12-18          1.552352     NA    NA    NA
+28  England 2021-12-17          1.480860     NA    NA    NA
+29  England 2021-12-16          1.413411     NA    NA    NA
+30  England 2021-12-15          1.374507     NA    NA    NA
+31  England 2021-12-14          1.364655      0    30     0
+32  England 2021-12-13          1.355561      0    29     0
+33  England 2021-12-12          1.361118      0    28     0
+34  England 2021-12-11          1.348235      0    27     0
+35  England 2021-12-10          1.344193      0    26     0
+36  England 2021-12-09          1.329541      0    25     0
+37  England 2021-12-08          1.318425      0    24     0
+38  England 2021-12-07          1.303016      0    23     0
+39  England 2021-12-06          1.282048      0    22     0
+40  England 2021-12-05          1.261839      0    21     0
+41  England 2021-12-04          1.247692      0    20     0
+42  England 2021-12-03          1.222430      0    19     0
+43  England 2021-12-02          1.205504      0    18     0
+44  England 2021-12-01          1.174937      0    17     0
+45  England 2021-11-30          1.168369      0    16     0
+46  England 2021-11-29          1.167359      0    15     0
+47  England 2021-11-28          1.149928      0    14     0
+48  England 2021-11-27          1.163569      0    13     0
+49  England 2021-11-26          1.153464      0    12     0
+50  England 2021-11-25          1.136539      0    11     0
+51  England 2021-11-24          1.146896      0    10     0
+52  England 2021-11-23          1.147402      0     9     0
+53  England 2021-11-22          1.151696      0     8     0
+54  England 2021-11-21          1.163569      0     7     0
+55  England 2021-11-20          1.157254      0     6     0
+56  England 2021-11-19          1.170895      0     5     0
+57  England 2021-11-18          1.194389      0     4     0
+58  England 2021-11-17          1.201968      0     3     0
+59  England 2021-11-16          1.213083      0     2     0
+60  England 2021-11-15          1.236324      0     1     0
+61  England 2021-11-14          1.261586      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 2498279.334, link = log)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-0.41753  -0.05199   0.00421   0.05453   0.28536  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)
+(Intercept) 0.129792   0.322748   0.402    0.688
+CP_int      0.637433   0.493317   1.292    0.196
+CP_t1       0.005034   0.018123   0.278    0.781
+CP_t2       0.012400   0.025255   0.491    0.623
+
+(Dispersion parameter for Negative Binomial(2498279) family taken to be 1)
+
+    Null deviance: 27.0370  on 53  degrees of freedom
+Residual deviance:  1.0187  on 50  degrees of freedom
+  (7 observations deleted due to missingness)
+AIC: 148.53
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  2498279 
+          Std. Err.:  205572408 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -138.527 
+               Estimate       2.5 %     97.5 %
+(Intercept) 0.129792203 -0.54865689 0.72173019
+CP_int      0.637432549 -0.30763995 1.63444388
+CP_t1       0.005034182 -0.03056420 0.04083668
+CP_t2       0.012400230 -0.03716068 0.06203187
+            Estimate     2.5 %   97.5 %
+(Intercept) 1.138592 0.5777252 2.057991
+CP_int      1.891618 0.7351800 5.126606
+CP_t1       1.005047 0.9698982 1.041682
+CP_t2       1.012477 0.9635213 1.063996
+ lag Autocorrelation D-W Statistic p-value
+   1       0.8066455     0.2995914       0
+ Alternative hypothesis: rho != 0

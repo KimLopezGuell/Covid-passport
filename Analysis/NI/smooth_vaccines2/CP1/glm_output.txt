@@ -1,0 +1,73 @@
+           areaName       date smooth_vaccines2 CP_int CP_t1 CP_t2
+1  Northern Ireland 2021-12-15         945.5714      1    27    17
+2  Northern Ireland 2021-12-14         941.2857      1    26    16
+3  Northern Ireland 2021-12-13         937.7143      1    25    15
+4  Northern Ireland 2021-12-12         883.8571      1    24    14
+5  Northern Ireland 2021-12-11         864.4286      1    23    13
+6  Northern Ireland 2021-12-10         872.8571      1    22    12
+7  Northern Ireland 2021-12-09         849.2857      1    21    11
+8  Northern Ireland 2021-12-08        1081.2857      1    20    10
+9  Northern Ireland 2021-12-07        1004.2857      1    19     9
+10 Northern Ireland 2021-12-06         990.2857      1    18     8
+11 Northern Ireland 2021-12-05        1050.5714      1    17     7
+12 Northern Ireland 2021-12-04        1080.8571      1    16     6
+13 Northern Ireland 2021-12-03        1138.0000      1    15     5
+14 Northern Ireland 2021-12-02        1174.1429      1    14     4
+15 Northern Ireland 2021-12-01        1403.2857      1    13     3
+16 Northern Ireland 2021-11-30        1403.2857      1    12     2
+17 Northern Ireland 2021-11-29        1296.2857      1    11     1
+18 Northern Ireland 2021-11-28        1280.7143      0    10     0
+19 Northern Ireland 2021-11-27        1288.4286      0     9     0
+20 Northern Ireland 2021-11-26        1271.1429      0     8     0
+21 Northern Ireland 2021-11-25        1248.2857      0     7     0
+22 Northern Ireland 2021-11-24         808.4286      0     6     0
+23 Northern Ireland 2021-11-23         870.4286      0     5     0
+24 Northern Ireland 2021-11-22         970.7143      0     4     0
+25 Northern Ireland 2021-11-21         921.2857      0     3     0
+26 Northern Ireland 2021-11-20         908.5714      0     2     0
+27 Northern Ireland 2021-11-19         869.0000      0     1     0
+28 Northern Ireland 2021-11-18         829.0000      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 140.2030614, link = log)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-2.88560  -0.53407  -0.01313   0.66106   1.49707  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  6.680877   0.051304 130.222  < 2e-16 ***
+CP_int       0.040111   0.067845   0.591    0.554    
+CP_t1        0.047808   0.008601   5.558 2.73e-08 ***
+CP_t2       -0.075392   0.009688  -7.782 7.12e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(140.2031) family taken to be 1)
+
+    Null deviance: 100.470  on 27  degrees of freedom
+Residual deviance:  28.072  on 24  degrees of freedom
+AIC: 343.12
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  140.2 
+          Std. Err.:  42.6 
+
+ 2 x log-likelihood:  -333.124 
+               Estimate       2.5 %      97.5 %
+(Intercept)  6.68087707  6.58215549  6.78125307
+CP_int       0.04011094 -0.09137168  0.17113290
+CP_t1        0.04780768  0.03119549  0.06443006
+CP_t2       -0.07539193 -0.09408516 -0.05670735
+              Estimate       2.5 %      97.5 %
+(Intercept) 797.017844 722.0941170 881.1722054
+CP_int        1.040926   0.9126784   1.1866484
+CP_t1         1.048969   1.0316872   1.0665510
+CP_t2         0.927380   0.9102052   0.9448705
+ lag Autocorrelation D-W Statistic p-value
+   1       0.3170728      1.292845       0
+ Alternative hypothesis: rho != 0

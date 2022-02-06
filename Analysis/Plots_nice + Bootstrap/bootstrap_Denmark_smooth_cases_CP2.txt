@@ -1,0 +1,14 @@
+
+ORDINARY NONPARAMETRIC BOOTSTRAP
+
+
+Call:
+boot(data = newdata, statistic = coef_function, R = 1000)
+
+
+Bootstrap Statistics :
+       original        bias    std. error
+t1*  8.12517698  0.0028522452 0.025053889
+t2* -0.08058933  0.0003161522 0.039600922
+t3*  0.01685375 -0.0001726994 0.003234109
+t4*  0.02766645  0.0001771779 0.003457049

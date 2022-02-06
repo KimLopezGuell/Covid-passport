@@ -1,0 +1,87 @@
+   areaName       date cases CP_int CP_t1 CP_t2
+1   England 2021-12-13 71401      1    40    10
+2   England 2021-12-12 43869      1    39     9
+3   England 2021-12-11 39966      1    38     8
+4   England 2021-12-10 42938      1    37     7
+5   England 2021-12-09 46651      1    36     6
+6   England 2021-12-08 47891      1    35     5
+7   England 2021-12-07 46269      1    34     4
+8   England 2021-12-06 49381      1    33     3
+9   England 2021-12-05 33991      1    32     2
+10  England 2021-12-04 32432      1    31     1
+11  England 2021-12-03 38200     NA    NA    NA
+12  England 2021-12-02 41960     NA    NA    NA
+13  England 2021-12-01 46054     NA    NA    NA
+14  England 2021-11-30 46462     NA    NA    NA
+15  England 2021-11-29 46733     NA    NA    NA
+16  England 2021-11-28 33064      0    25     0
+17  England 2021-11-27 27812      0    24     0
+18  England 2021-11-26 32905      0    23     0
+19  England 2021-11-25 36266      0    22     0
+20  England 2021-11-24 38927      0    21     0
+21  England 2021-11-23 40107      0    20     0
+22  England 2021-11-22 41912      0    19     0
+23  England 2021-11-21 31048      0    18     0
+24  England 2021-11-20 29214      0    17     0
+25  England 2021-11-19 32476      0    16     0
+26  England 2021-11-18 36241      0    15     0
+27  England 2021-11-17 37430      0    14     0
+28  England 2021-11-16 37694      0    13     0
+29  England 2021-11-15 41533      0    12     0
+30  England 2021-11-14 28925      0    11     0
+31  England 2021-11-13 26813      0    10     0
+32  England 2021-11-12 30576      0     9     0
+33  England 2021-11-11 32908      0     8     0
+34  England 2021-11-10 34576      0     7     0
+35  England 2021-11-09 33891      0     6     0
+36  England 2021-11-08 35299      0     5     0
+37  England 2021-11-07 24884      0     4     0
+38  England 2021-11-06 22070      0     3     0
+39  England 2021-11-05 23840      0     2     0
+40  England 2021-11-04 26080      0     1     0
+41  England 2021-11-03 28436      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 44.90197835, link = log)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-1.82755  -0.79480  -0.04623   0.83803   1.78149  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept) 10.239871   0.056928 179.875  < 2e-16 ***
+CP_int      -0.137236   0.126222  -1.087  0.27692    
+CP_t1        0.011636   0.003905   2.980  0.00288 ** 
+CP_t2        0.036320   0.016896   2.150  0.03158 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(44.902) family taken to be 1)
+
+    Null deviance: 91.367  on 35  degrees of freedom
+Residual deviance: 36.132  on 32  degrees of freedom
+  (5 observations deleted due to missingness)
+AIC: 729.06
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  44.9 
+          Std. Err.:  10.6 
+
+ 2 x log-likelihood:  -719.056 
+               Estimate        2.5 %      97.5 %
+(Intercept) 10.23987068 10.127197201 10.35529676
+CP_int      -0.13723589 -0.385118174  0.11401535
+CP_t1        0.01163613  0.003751657  0.01951851
+CP_t2        0.03631983  0.003209709  0.06952597
+                Estimate        2.5 %       97.5 %
+(Intercept) 2.799751e+04 2.501416e+04 31423.043219
+CP_int      8.717646e-01 6.803702e-01     1.120769
+CP_t1       1.011704e+00 1.003759e+00     1.019710
+CP_t2       1.036987e+00 1.003215e+00     1.072000
+ lag Autocorrelation D-W Statistic p-value
+   1       0.4122214      1.094384       0
+ Alternative hypothesis: rho != 0

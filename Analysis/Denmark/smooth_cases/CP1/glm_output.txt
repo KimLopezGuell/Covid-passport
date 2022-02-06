@@ -1,0 +1,73 @@
+         date smooth_cases countriesAndTerritories CP_int CP_t1 CP_t2
+1  2020-04-21     779.4286                 Denmark      1    26    11
+2  2020-04-20     775.8571                 Denmark      1    25    10
+3  2020-04-19     762.2857                 Denmark      1    24     9
+4  2020-04-18     742.2857                 Denmark      1    23     8
+5  2020-04-17     724.0000                 Denmark      1    22     7
+6  2020-04-16     691.5714                 Denmark      1    21     6
+7  2020-04-15     661.4286                 Denmark      1    20     5
+8  2020-04-14     665.8571                 Denmark      1    19     4
+9  2020-04-13     668.8571                 Denmark      1    18     3
+10 2020-04-12     657.2857                 Denmark      1    17     2
+11 2020-04-11     650.2857                 Denmark      1    16     1
+12 2020-04-10     644.1429                 Denmark     NA    NA    NA
+13 2020-04-09     639.1429                 Denmark     NA    NA    NA
+14 2020-04-08     626.1429                 Denmark     NA    NA    NA
+15 2020-04-07     624.7143                 Denmark     NA    NA    NA
+16 2020-04-06     626.1429                 Denmark     NA    NA    NA
+17 2020-04-05     618.2857                 Denmark      0    10     0
+18 2020-04-04     630.7143                 Denmark      0     9     0
+19 2020-04-03     729.2857                 Denmark      0     8     0
+20 2020-04-02     757.8571                 Denmark      0     7     0
+21 2020-04-01     809.8571                 Denmark      0     6     0
+22 2020-03-31     762.8571                 Denmark      0     5     0
+23 2020-03-30     774.4286                 Denmark      0     4     0
+24 2020-03-29     796.1429                 Denmark      0     3     0
+25 2020-03-28     696.0000                 Denmark      0     2     0
+26 2020-03-27     630.8571                 Denmark      0     1     0
+27 2020-03-26     644.1429                 Denmark      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 286.745239, link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.9240  -0.3700   0.1261   0.3405   1.8723  
+
+Coefficients:
+              Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  6.5752223  0.0394240 166.782   <2e-16 ***
+CP_int      -0.1256492  0.0835201  -1.504    0.132    
+CP_t1       -0.0009597  0.0066665  -0.144    0.886    
+CP_t2        0.0216233  0.0094374   2.291    0.022 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(286.7452) family taken to be 1)
+
+    Null deviance: 31.767  on 21  degrees of freedom
+Residual deviance: 22.023  on 18  degrees of freedom
+  (5 observations deleted due to missingness)
+AIC: 244.22
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  287 
+          Std. Err.:  121 
+
+ 2 x log-likelihood:  -234.222 
+                 Estimate        2.5 %     97.5 %
+(Intercept)  6.5752222792  6.496633687 6.65441066
+CP_int      -0.1256491853 -0.292451078 0.04083062
+CP_t1       -0.0009596992 -0.014406997 0.01248692
+CP_t2        0.0216232984  0.002884755 0.04036531
+               Estimate       2.5 %     97.5 %
+(Intercept) 717.1050041 662.9063228 776.200340
+CP_int        0.8819242   0.7464318   1.041676
+CP_t1         0.9990408   0.9856963   1.012565
+CP_t2         1.0218588   1.0028889   1.041191
+ lag Autocorrelation D-W Statistic p-value
+   1       0.5439785     0.8096135   0.022
+ Alternative hypothesis: rho != 0

@@ -1,0 +1,90 @@
+   Entity       date vaccines CP_int CP_t1 CP_t2
+1  France 2021-08-14   457017      0     0     0
+2  France 2021-08-15   449914      0     1     0
+3  France 2021-08-16   447952      0     2     0
+4  France 2021-08-17   443480      0     3     0
+5  France 2021-08-18   441255      0     4     0
+6  France 2021-08-19   436707      0     5     0
+7  France 2021-08-20   440120      0     6     0
+8  France 2021-08-21   440058      0     7     0
+9  France 2021-08-22   444404      0     8     0
+10 France 2021-08-23   443521      0     9     0
+11 France 2021-08-24   441720      0    10     0
+12 France 2021-08-25   438630      0    11     0
+13 France 2021-08-26   434165      0    12     0
+14 France 2021-08-27   432111      0    13     0
+15 France 2021-08-28   431840      0    14     0
+16 France 2021-08-29   430642      0    15     0
+17 France 2021-08-30   423090      1    16     1
+18 France 2021-08-31   413473      1    17     2
+19 France 2021-09-01   404815      1    18     3
+20 France 2021-09-02   389933      1    19     4
+21 France 2021-09-03   375888      1    20     5
+22 France 2021-09-04   372764      1    21     6
+23 France 2021-09-05   367013      1    22     7
+24 France 2021-09-06   344371      1    23     8
+25 France 2021-09-07   318386      1    24     9
+26 France 2021-09-08   301535      1    25    10
+27 France 2021-09-09   285822      1    26    11
+28 France 2021-09-10   270673      1    27    12
+29 France 2021-09-11   260315      1    28    13
+30 France 2021-09-12   257015      1    29    14
+31 France 2021-09-13   249045      1    30    15
+32 France 2021-09-14   244344      1    31    16
+33 France 2021-09-15   240786      1    32    17
+34 France 2021-09-16   235790      1    33    18
+35 France 2021-09-17   228962      1    34    19
+36 France 2021-09-18   222694      1    35    20
+37 France 2021-09-19   220780      1    36    21
+38 France 2021-09-20   214501      1    37    22
+39 France 2021-09-21   207124      1    38    23
+40 France 2021-09-22   199353      1    39    24
+41 France 2021-09-23   193400      1    40    25
+42 France 2021-09-24   186720      1    41    26
+43 France 2021-09-25   181473      1    42    27
+44 France 2021-09-26   180257      1    43    28
+45 France 2021-09-27   175994      1    44    29
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 1008.367607, link = log)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-2.53894  -0.32684   0.05267   0.48012   2.13391  
+
+Coefficients:
+              Estimate Std. Error z value Pr(>|z|)    
+(Intercept) 13.0180426  0.0150519 864.875   <2e-16 ***
+CP_int       0.0003201  0.0192650   0.017   0.9867    
+CP_t1       -0.0028907  0.0017098  -1.691   0.0909 .  
+CP_t2       -0.0297376  0.0018477 -16.095   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(1008.368) family taken to be 1)
+
+    Null deviance: 4660.783  on 44  degrees of freedom
+Residual deviance:   45.021  on 41  degrees of freedom
+AIC: 966.66
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  1008 
+          Std. Err.:  213 
+
+ 2 x log-likelihood:  -956.663 
+                 Estimate       2.5 %        97.5 %
+(Intercept) 13.0180425836 12.98864902 13.0476307598
+CP_int       0.0003201477 -0.03733626  0.0378998591
+CP_t1       -0.0028907429 -0.00624031  0.0004587469
+CP_t2       -0.0297376327 -0.03335134 -0.0261238580
+                Estimate        2.5 %       97.5 %
+(Intercept) 4.504681e+05 4.374200e+05 4.639958e+05
+CP_int      1.000320e+00 9.633521e-01 1.038627e+00
+CP_t1       9.971134e-01 9.937791e-01 1.000459e+00
+CP_t2       9.707002e-01 9.671987e-01 9.742144e-01
+ lag Autocorrelation D-W Statistic p-value
+   1       0.8696599     0.2007003       0
+ Alternative hypothesis: rho != 0

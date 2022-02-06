@@ -1,0 +1,66 @@
+   areaName       date smooth_vaccines2 CP_int CP_t1 CP_t2
+1     Wales 2021-10-21         672.7143      1    20    11
+2     Wales 2021-10-20         666.1429      1    19    10
+3     Wales 2021-10-19         674.8571      1    18     9
+4     Wales 2021-10-18         740.1429      1    17     8
+5     Wales 2021-10-17         755.8571      1    16     7
+6     Wales 2021-10-16         770.7143      1    15     6
+7     Wales 2021-10-15         816.8571      1    14     5
+8     Wales 2021-10-14         823.8571      1    13     4
+9     Wales 2021-10-13         848.4286      1    12     3
+10    Wales 2021-10-12         880.1429      1    11     2
+11    Wales 2021-10-11         807.2857      1    10     1
+12    Wales 2021-10-10         777.8571      0     9     0
+13    Wales 2021-10-09         728.0000      0     8     0
+14    Wales 2021-10-08         647.7143      0     7     0
+15    Wales 2021-10-07         633.0000      0     6     0
+16    Wales 2021-10-06         692.4286      0     5     0
+17    Wales 2021-10-05         655.7143      0     4     0
+18    Wales 2021-10-04         653.8571      0     3     0
+19    Wales 2021-10-03         670.2857      0     2     0
+20    Wales 2021-10-02         643.7143      0     1     0
+21    Wales 2021-10-01         646.8571      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 2812.245126, link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.0932  -0.4792   0.3347   0.5480   1.8921  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  6.448172   0.025590 251.977  < 2e-16 ***
+CP_int       0.224383   0.035684   6.288 3.21e-10 ***
+CP_t1        0.014573   0.004722   3.086  0.00203 ** 
+CP_t2       -0.041656   0.006117  -6.810 9.76e-12 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(2812.245) family taken to be 1)
+
+    Null deviance: 129.482  on 20  degrees of freedom
+Residual deviance:  20.627  on 17  degrees of freedom
+AIC: 212.21
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  2812 
+          Std. Err.:  4157 
+
+ 2 x log-likelihood:  -202.206 
+               Estimate        2.5 %      97.5 %
+(Intercept)  6.44817152  6.397915321  6.49805924
+CP_int       0.22438287  0.154459318  0.29433832
+CP_t1        0.01457253  0.005342992  0.02380587
+CP_t2       -0.04165641 -0.053640233 -0.02967733
+               Estimate      2.5 %      97.5 %
+(Intercept) 631.5464666 600.591691 663.8520034
+CP_int        1.2515501   1.167027   1.3422379
+CP_t1         1.0146792   1.005357   1.0240915
+CP_t2         0.9591993   0.947773   0.9707587
+ lag Autocorrelation D-W Statistic p-value
+   1       -0.070571       2.12578       0
+ Alternative hypothesis: rho != 0

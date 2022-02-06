@@ -1,0 +1,87 @@
+         date smooth_cases countriesAndTerritories CP_int CP_t1 CP_t2
+1  2020-11-28    4200.0000                 Denmark      1    40    12
+2  2020-11-27    4207.2857                 Denmark      1    39    11
+3  2020-11-26    4119.4286                 Denmark      1    38    10
+4  2020-11-25    3994.4286                 Denmark      1    37     9
+5  2020-11-24    4001.7143                 Denmark      1    36     8
+6  2020-11-23    4000.8571                 Denmark      1    35     7
+7  2020-11-22    3947.0000                 Denmark      1    34     6
+8  2020-11-21    3872.8571                 Denmark      1    33     5
+9  2020-11-20    3830.0000                 Denmark      1    32     4
+10 2020-11-19    3824.1429                 Denmark      1    31     3
+11 2020-11-18    3796.7143                 Denmark      1    30     2
+12 2020-11-17    3675.7143                 Denmark      1    29     1
+13 2020-11-16    3749.2857                 Denmark     NA    NA    NA
+14 2020-11-15    3480.5714                 Denmark     NA    NA    NA
+15 2020-11-14    3353.4286                 Denmark     NA    NA    NA
+16 2020-11-13    3162.4286                 Denmark     NA    NA    NA
+17 2020-11-12    2965.8571                 Denmark     NA    NA    NA
+18 2020-11-11    2850.5714                 Denmark      0    23     0
+19 2020-11-10    2729.0000                 Denmark      0    22     0
+20 2020-11-09    2395.5714                 Denmark      0    21     0
+21 2020-11-08    2462.1429                 Denmark      0    20     0
+22 2020-11-07    2313.7143                 Denmark      0    19     0
+23 2020-11-06    2230.7143                 Denmark      0    18     0
+24 2020-11-05    2111.1429                 Denmark      0    17     0
+25 2020-11-04    1984.8571                 Denmark      0    16     0
+26 2020-11-03    1924.0000                 Denmark      0    15     0
+27 2020-11-02    1857.2857                 Denmark      0    14     0
+28 2020-11-01    1750.0000                 Denmark      0    13     0
+29 2020-10-31    1734.7143                 Denmark      0    12     0
+30 2020-10-30    1630.7143                 Denmark      0    11     0
+31 2020-10-29    1624.1429                 Denmark      0    10     0
+32 2020-10-28    1598.0000                 Denmark      0     9     0
+33 2020-10-27    1539.5714                 Denmark      0     8     0
+34 2020-10-26    1466.1429                 Denmark      0     7     0
+35 2020-10-25    1380.4286                 Denmark      0     6     0
+36 2020-10-24    1274.1429                 Denmark      0     5     0
+37 2020-10-23    1203.1429                 Denmark      0     4     0
+38 2020-10-22    1109.0000                 Denmark      0     3     0
+39 2020-10-21    1000.7143                 Denmark      0     2     0
+40 2020-10-20     928.0000                 Denmark      0     1     0
+41 2020-10-19     846.5714                 Denmark      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 1223.019139, link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-3.2488  -0.4156  -0.0152   0.3342   2.2082  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  6.885868   0.015952 431.665   <2e-16 ***
+CP_int       0.031565   0.027831   1.134    0.257    
+CP_t1        0.046116   0.001124  41.023   <2e-16 ***
+CP_t2       -0.034809   0.002958 -11.766   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(1223.019) family taken to be 1)
+
+    Null deviance: 6457.952  on 35  degrees of freedom
+Residual deviance:   44.262  on 32  degrees of freedom
+  (5 observations deleted due to missingness)
+AIC: 435.96
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  1223 
+          Std. Err.:  566 
+
+ 2 x log-likelihood:  -425.961 
+               Estimate       2.5 %      97.5 %
+(Intercept)  6.88586848  6.85448283  6.91724082
+CP_int       0.03156523 -0.02310320  0.08627418
+CP_t1        0.04611639  0.04390170  0.04833392
+CP_t2       -0.03480947 -0.04061219 -0.02900659
+               Estimate       2.5 %       97.5 %
+(Intercept) 978.3509774 948.1216647 1009.5306704
+CP_int        1.0320687   0.9771616    1.0901052
+CP_t1         1.0471963   1.0448796    1.0495211
+CP_t2         0.9657894   0.9602014    0.9714101
+ lag Autocorrelation D-W Statistic p-value
+   1       0.6465884     0.4683141       0
+ Alternative hypothesis: rho != 0

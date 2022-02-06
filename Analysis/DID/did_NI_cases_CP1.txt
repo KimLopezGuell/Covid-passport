@@ -1,0 +1,29 @@
+
+Call:
+lm(formula = smooth_cases ~ group * time, data = Dif_NI_cases_CP1)
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-2.026e-04 -6.070e-05  1.092e-05  4.994e-05  3.397e-04 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  5.907e-04  1.719e-05  34.353  < 2e-16 ***
+group        2.027e-04  2.432e-05   8.337 2.09e-12 ***
+time         2.265e-04  2.943e-05   7.696 3.65e-11 ***
+group:time  -1.007e-04  4.161e-05  -2.421   0.0178 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.935e-05 on 78 degrees of freedom
+Multiple R-squared:  0.6582,	Adjusted R-squared:  0.6451 
+F-statistic: 50.08 on 3 and 78 DF,  p-value: < 2.2e-16
+
+                    2.5 %        97.5 %
+(Intercept)  0.0005564618  6.249263e-04
+group        0.0001543203  2.511438e-04
+time         0.0001678699  2.850338e-04
+group:time  -0.0001835984 -1.790364e-05
+ lag Autocorrelation D-W Statistic p-value
+   1       0.7723753     0.2039307       0
+ Alternative hypothesis: rho != 0

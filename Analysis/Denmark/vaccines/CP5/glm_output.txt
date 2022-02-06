@@ -1,0 +1,84 @@
+    Entity       date vaccines CP_int CP_t1 CP_t2
+1  Denmark 2021-11-12    16630      0     0     0
+2  Denmark 2021-11-13    17205      0     1     0
+3  Denmark 2021-11-14    17780      0     2     0
+4  Denmark 2021-11-15    18801      0     3     0
+5  Denmark 2021-11-16    18813      0     4     0
+6  Denmark 2021-11-17    19268      0     5     0
+7  Denmark 2021-11-18    20182      0     6     0
+8  Denmark 2021-11-19    21324      0     7     0
+9  Denmark 2021-11-20    22466      0     8     0
+10 Denmark 2021-11-21    23607      0     9     0
+11 Denmark 2021-11-22    23382      0    10     0
+12 Denmark 2021-11-23    26193      0    11     0
+13 Denmark 2021-11-24    27587      0    12     0
+14 Denmark 2021-11-25    29006      0    13     0
+15 Denmark 2021-11-26    29605      1    14     1
+16 Denmark 2021-11-27    30204      1    15     2
+17 Denmark 2021-11-28    30803      1    16     3
+18 Denmark 2021-11-29    32948      1    17     4
+19 Denmark 2021-11-30    32570      1    18     5
+20 Denmark 2021-12-01    32885      1    19     6
+21 Denmark 2021-12-02    33308      1    20     7
+22 Denmark 2021-12-03    33977      1    21     8
+23 Denmark 2021-12-04    34645      1    22     9
+24 Denmark 2021-12-05    35313      1    23    10
+25 Denmark 2021-12-06    36811      1    24    11
+26 Denmark 2021-12-07    38770      1    25    12
+27 Denmark 2021-12-08    41610      1    26    13
+28 Denmark 2021-12-09    44625      1    27    14
+29 Denmark 2021-12-10    47656      1    28    15
+30 Denmark 2021-12-11    50686      1    29    16
+31 Denmark 2021-12-12    53717      1    30    17
+32 Denmark 2021-12-13    60742      1    31    18
+33 Denmark 2021-12-14    70184      1    32    19
+34 Denmark 2021-12-15    83318      1    33    20
+35 Denmark 2021-12-16    96414      1    34    21
+36 Denmark 2021-12-17   106591      1    35    22
+37 Denmark 2021-12-18   116768      1    36    23
+38 Denmark 2021-12-19   126946      1    37    24
+39 Denmark 2021-12-20   134405      1    38    25
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 59.4431093, link = log)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-1.54543  -0.78245  -0.00811   0.43212   1.87634  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  9.692486   0.065879 147.125  < 2e-16 ***
+CP_int      -0.241411   0.084862  -2.845  0.00444 ** 
+CP_t1        0.041985   0.008612   4.875 1.09e-06 ***
+CP_t2        0.022685   0.009334   2.430  0.01508 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(59.4431) family taken to be 1)
+
+    Null deviance: 872.660  on 38  degrees of freedom
+Residual deviance:  39.088  on 35  degrees of freedom
+AIC: 781.88
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  59.4 
+          Std. Err.:  13.4 
+
+ 2 x log-likelihood:  -771.884 
+               Estimate        2.5 %      97.5 %
+(Intercept)  9.69248576  9.566049887  9.82265703
+CP_int      -0.24141101 -0.404764449 -0.07958764
+CP_t1        0.04198510  0.025256140  0.05871559
+CP_t2        0.02268471  0.004695834  0.04067230
+                Estimate        2.5 %       97.5 %
+(Intercept) 1.619545e+04 1.427193e+04 1.844700e+04
+CP_int      7.855187e-01 6.671339e-01 9.234971e-01
+CP_t1       1.042879e+00 1.025578e+00 1.060474e+00
+CP_t2       1.022944e+00 1.004707e+00 1.041511e+00
+ lag Autocorrelation D-W Statistic p-value
+   1       0.8880112     0.1611694       0
+ Alternative hypothesis: rho != 0

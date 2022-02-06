@@ -1,0 +1,114 @@
+         date smooth_cases countriesAndTerritories CP_int CP_t1 CP_t2
+1  2020-09-06   10858.5714                 Germany      1    67    10
+2  2020-09-05   10613.4286                 Germany      1    66     9
+3  2020-09-04   10608.5714                 Germany      1    65     8
+4  2020-09-03   10469.1429                 Germany      1    64     7
+5  2020-09-02   10442.0000                 Germany      1    63     6
+6  2020-09-01   10151.0000                 Germany      1    62     5
+7  2020-08-31   10075.0000                 Germany      1    61     4
+8  2020-08-30    9757.5714                 Germany      1    60     3
+9  2020-08-29    9602.0000                 Germany      1    59     2
+10 2020-08-28    9320.5714                 Germany      1    58     1
+11 2020-08-27    9320.1429                 Germany     NA    NA    NA
+12 2020-08-26    9192.8571                 Germany     NA    NA    NA
+13 2020-08-25    8997.7143                 Germany     NA    NA    NA
+14 2020-08-24    8681.8571                 Germany     NA    NA    NA
+15 2020-08-23    8289.1429                 Germany     NA    NA    NA
+16 2020-08-22    7685.4286                 Germany      0    52     0
+17 2020-08-21    7223.0000                 Germany      0    51     0
+18 2020-08-20    6960.8571                 Germany      0    50     0
+19 2020-08-19    6740.5714                 Germany      0    49     0
+20 2020-08-18    6408.8571                 Germany      0    48     0
+21 2020-08-17    6059.1429                 Germany      0    47     0
+22 2020-08-16    5530.2857                 Germany      0    46     0
+23 2020-08-15    5135.7143                 Germany      0    45     0
+24 2020-08-14    4660.2857                 Germany      0    44     0
+25 2020-08-13    4455.7143                 Germany      0    43     0
+26 2020-08-12    4321.0000                 Germany      0    42     0
+27 2020-08-11    4092.2857                 Germany      0    41     0
+28 2020-08-10    3744.0000                 Germany      0    40     0
+29 2020-08-09    3439.7143                 Germany      0    39     0
+30 2020-08-08    3139.8571                 Germany      0    38     0
+31 2020-08-07    2936.2857                 Germany      0    37     0
+32 2020-08-06    2834.2857                 Germany      0    36     0
+33 2020-08-05    2786.2857                 Germany      0    35     0
+34 2020-08-04    2639.1429                 Germany      0    34     0
+35 2020-08-03    2524.0000                 Germany      0    33     0
+36 2020-08-02    2382.0000                 Germany      0    32     0
+37 2020-08-01    2325.2857                 Germany      0    31     0
+38 2020-07-31    2210.5714                 Germany      0    30     0
+39 2020-07-30    2179.0000                 Germany      0    29     0
+40 2020-07-29    2194.8571                 Germany      0    28     0
+41 2020-07-28    2093.4286                 Germany      0    27     0
+42 2020-07-27    2024.7143                 Germany      0    26     0
+43 2020-07-26    1972.5714                 Germany      0    25     0
+44 2020-07-25    1793.7143                 Germany      0    24     0
+45 2020-07-24    1713.0000                 Germany      0    23     0
+46 2020-07-23    1661.2857                 Germany      0    22     0
+47 2020-07-22    1602.4286                 Germany      0    21     0
+48 2020-07-21    1588.8571                 Germany      0    20     0
+49 2020-07-20    1544.4286                 Germany      0    19     0
+50 2020-07-19    1454.0000                 Germany      0    18     0
+51 2020-07-18    1418.5714                 Germany      0    17     0
+52 2020-07-17    1325.0000                 Germany      0    16     0
+53 2020-07-16    1248.2857                 Germany      0    15     0
+54 2020-07-15    1216.5714                 Germany      0    14     0
+55 2020-07-14    1138.4286                 Germany      0    13     0
+56 2020-07-13    1044.7143                 Germany      0    12     0
+57 2020-07-12     972.2857                 Germany      0    11     0
+58 2020-07-11     876.2857                 Germany      0    10     0
+59 2020-07-10     795.8571                 Germany      0     9     0
+60 2020-07-09     766.4286                 Germany      0     8     0
+61 2020-07-08     750.4286                 Germany      0     7     0
+62 2020-07-07     723.8571                 Germany      0     6     0
+63 2020-07-06     683.7143                 Germany      0     5     0
+64 2020-07-05     640.8571                 Germany      0     4     0
+65 2020-07-04     629.7143                 Germany      0     3     0
+66 2020-07-03     604.4286                 Germany      0     2     0
+67 2020-07-02     599.2857                 Germany      0     1     0
+68 2020-07-01     600.2857                 Germany      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 262.0163678, link = log)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-2.23238  -0.55846  -0.00873   0.68979   1.57260  
+
+Coefficients:
+              Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  6.3208636  0.0189870 332.905  < 2e-16 ***
+CP_int       0.0295385  0.0472589   0.625    0.532    
+CP_t1        0.0489442  0.0006063  80.720  < 2e-16 ***
+CP_t2       -0.0329673  0.0069153  -4.767 1.87e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(262.0164) family taken to be 1)
+
+    Null deviance: 11840.49  on 62  degrees of freedom
+Residual deviance:    62.25  on 59  degrees of freedom
+  (5 observations deleted due to missingness)
+AIC: 834.91
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  262.0 
+          Std. Err.:  52.3 
+
+ 2 x log-likelihood:  -824.913 
+               Estimate       2.5 %      97.5 %
+(Intercept)  6.32086356  6.28397116  6.35788826
+CP_int       0.02953851 -0.06270633  0.12274305
+CP_t1        0.04894423  0.04776791  0.05012221
+CP_t2       -0.03296725 -0.04657145 -0.01936238
+               Estimate       2.5 %      97.5 %
+(Intercept) 556.0529699 535.9126394 577.0265365
+CP_int        1.0299791   0.9392193   1.1305939
+CP_t1         1.0501618   1.0489272   1.0513996
+CP_t2         0.9675702   0.9544964   0.9808239
+ lag Autocorrelation D-W Statistic p-value
+   1       0.9009533     0.1805395       0
+ Alternative hypothesis: rho != 0

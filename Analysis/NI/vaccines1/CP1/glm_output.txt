@@ -1,0 +1,83 @@
+           areaName       date vaccines1 CP_int CP_t1 CP_t2
+1  Northern Ireland 2021-12-20      1113      1    47    22
+2  Northern Ireland 2021-12-19       556      1    46    21
+3  Northern Ireland 2021-12-18       578      1    45    20
+4  Northern Ireland 2021-12-17       936      1    44    19
+5  Northern Ireland 2021-12-16       982      1    43    18
+6  Northern Ireland 2021-12-15      1116      1    42    17
+7  Northern Ireland 2021-12-14       968      1    41    16
+8  Northern Ireland 2021-12-13      1273      1    40    15
+9  Northern Ireland 2021-12-12       936      1    39    14
+10 Northern Ireland 2021-12-11       561      1    38    13
+11 Northern Ireland 2021-12-10      1055      1    37    12
+12 Northern Ireland 2021-12-09      1541      1    36    11
+13 Northern Ireland 2021-12-08      1626      1    35    10
+14 Northern Ireland 2021-12-07      1347      1    34     9
+15 Northern Ireland 2021-12-06      1030      1    33     8
+16 Northern Ireland 2021-12-05      3154      1    32     7
+17 Northern Ireland 2021-12-04         0      1    31     6
+18 Northern Ireland 2021-12-03       941      1    30     5
+19 Northern Ireland 2021-12-02      1614      1    29     4
+20 Northern Ireland 2021-12-01      1856      1    28     3
+21 Northern Ireland 2021-11-30      1774      1    27     2
+22 Northern Ireland 2021-11-29      1615      1    26     1
+23 Northern Ireland 2021-11-28      4815      0    25     0
+24 Northern Ireland 2021-11-27         0      0    24     0
+25 Northern Ireland 2021-11-26         0      0    23     0
+26 Northern Ireland 2021-11-25      1420      0    22     0
+27 Northern Ireland 2021-11-24      1542      0    21     0
+28 Northern Ireland 2021-11-23      1711      0    20     0
+29 Northern Ireland 2021-11-22      1350      0    19     0
+30 Northern Ireland 2021-11-21       558      0    18     0
+31 Northern Ireland 2021-11-20       411      0    17     0
+32 Northern Ireland 2021-11-19       982      0    16     0
+33 Northern Ireland 2021-11-18      2473      0    15     0
+34 Northern Ireland 2021-11-17      2760      0    14     0
+35 Northern Ireland 2021-11-16      1946      0    13     0
+36 Northern Ireland 2021-11-15      2233      0    12     0
+37 Northern Ireland 2021-11-14      1024      0    11     0
+38 Northern Ireland 2021-11-13       485      0    10     0
+39 Northern Ireland 2021-11-12       795      0     9     0
+40 Northern Ireland 2021-11-11      2058      0     8     0
+41 Northern Ireland 2021-11-10      1810      0     7     0
+42 Northern Ireland 2021-11-09      1790      0     6     0
+43 Northern Ireland 2021-11-08      1364      0     5     0
+44 Northern Ireland 2021-11-07       891      0     4     0
+45 Northern Ireland 2021-11-06       517      0     3     0
+46 Northern Ireland 2021-11-05       669      0     2     0
+47 Northern Ireland 2021-11-04      1894      0     1     0
+48 Northern Ireland 2021-11-03      1089      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 8578235.878, link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-56.836  -11.605   -0.694    9.673   63.549  
+
+Coefficients:
+              Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  7.0904422  0.0106010 668.845  < 2e-16 ***
+CP_int       0.0862685  0.0151899   5.679 1.35e-08 ***
+CP_t1        0.0123688  0.0006989  17.697  < 2e-16 ***
+CP_t2       -0.0484987  0.0012056 -40.228  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(8578236) family taken to be 1)
+
+    Null deviance: 25758  on 47  degrees of freedom
+Residual deviance: 23708  on 44  degrees of freedom
+AIC: 24121
+
+Number of Fisher Scoring iterations: 1
+
+Called from: prettyNum(.Internal(format(x, trim, digits, nsmall, width, 3L, 
+    na.encode, scientific, decimal.mark)), big.mark = big.mark, 
+    big.interval = big.interval, small.mark = small.mark, small.interval = small.interval, 
+    decimal.mark = decimal.mark, input.d.mark = decimal.mark, 
+    zero.print = zero.print, drop0trailing = drop0trailing, is.cmplx = is.complex(x), 
+    preserve.width = if (trim) "individual" else "common")
+RStudioGD 
+        2 

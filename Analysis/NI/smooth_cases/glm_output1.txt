@@ -1,0 +1,264 @@
+           areaName       date smooth_cases CP_int CP_t1 CP_t2
+1  Northern Ireland 2021-12-13     96.75496      1    40    10
+2  Northern Ireland 2021-12-12     94.53920      1    39     9
+3  Northern Ireland 2021-12-11     92.17271      1    38     8
+4  Northern Ireland 2021-12-10     88.99226      1    37     7
+5  Northern Ireland 2021-12-09     88.63050      1    36     6
+6  Northern Ireland 2021-12-08     89.35401      1    35     5
+7  Northern Ireland 2021-12-07     89.12792      1    34     4
+8  Northern Ireland 2021-12-06     89.88158      1    33     3
+9  Northern Ireland 2021-12-05     91.25324      1    32     2
+10 Northern Ireland 2021-12-04     91.96922      1    31     1
+11 Northern Ireland 2021-12-03     93.13739     NA    NA    NA
+12 Northern Ireland 2021-12-02     93.96642     NA    NA    NA
+13 Northern Ireland 2021-12-01     93.68003     NA    NA    NA
+14 Northern Ireland 2021-11-30     93.31827     NA    NA    NA
+15 Northern Ireland 2021-11-29     91.95414     NA    NA    NA
+16 Northern Ireland 2021-11-28     89.62533      0    25     0
+17 Northern Ireland 2021-11-27     87.01013      0    24     0
+18 Northern Ireland 2021-11-26     85.69122      0    23     0
+19 Northern Ireland 2021-11-25     84.71146      0    22     0
+20 Northern Ireland 2021-11-24     84.38739      0    21     0
+21 Northern Ireland 2021-11-23     84.68132      0    20     0
+22 Northern Ireland 2021-11-22     86.45996      0    19     0
+23 Northern Ireland 2021-11-21     87.10811      0    18     0
+24 Northern Ireland 2021-11-20     87.44725      0    17     0
+25 Northern Ireland 2021-11-19     87.02520      0    16     0
+26 Northern Ireland 2021-11-18     86.93476      0    15     0
+27 Northern Ireland 2021-11-17     86.82925      0    14     0
+28 Northern Ireland 2021-11-16     86.30169      0    13     0
+29 Northern Ireland 2021-11-15     83.66388      0    12     0
+30 Northern Ireland 2021-11-14     82.20931      0    11     0
+31 Northern Ireland 2021-11-13     80.30255      0    10     0
+32 Northern Ireland 2021-11-12     79.03640      0     9     0
+33 Northern Ireland 2021-11-11     76.54932      0     8     0
+34 Northern Ireland 2021-11-10     73.26336      0     7     0
+35 Northern Ireland 2021-11-09     70.85164      0     6     0
+36 Northern Ireland 2021-11-08     69.03532      0     5     0
+37 Northern Ireland 2021-11-07     66.56331      0     4     0
+38 Northern Ireland 2021-11-06     64.55858      0     3     0
+39 Northern Ireland 2021-11-05     61.53640      0     2     0
+40 Northern Ireland 2021-11-04     59.43368      0     1     0
+41 Northern Ireland 2021-11-03     59.07946      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 6541035.658, link = log)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-0.84422  -0.34633  -0.02492   0.37778   0.81407  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  4.177696   0.045152  92.525  < 2e-16 ***
+CP_int      -0.133197   0.089953  -1.481    0.139    
+CP_t1        0.014710   0.002955   4.977 6.45e-07 ***
+CP_t2       -0.009636   0.011898  -0.810    0.418    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(6541036) family taken to be 1)
+
+    Null deviance: 46.110  on 35  degrees of freedom
+Residual deviance:  7.822  on 32  degrees of freedom
+  (5 observations deleted due to missingness)
+AIC: 242.54
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  6541036 
+          Std. Err.:  187998010 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -232.539 
+                Estimate        2.5 %     97.5 %
+(Intercept)  4.177695743  4.088347866 4.26535430
+CP_int      -0.133196841 -0.310429703 0.04224152
+CP_t1        0.014709545  0.008922017 0.02050818
+CP_t2       -0.009636092 -0.032956498 0.01369182
+              Estimate      2.5 %    97.5 %
+(Intercept) 65.2154069 59.6412749 71.190138
+CP_int       0.8752928  0.7331319  1.043146
+CP_t1        1.0148183  1.0089619  1.020720
+CP_t2        0.9904102  0.9675807  1.013786
+ lag Autocorrelation D-W Statistic p-value
+   1       0.8643304     0.1795578       0
+ Alternative hypothesis: rho != 0
+           areaName       date smooth_cases CP_int CP_t1 CP_t2
+1  Northern Ireland 2021-12-13     96.75496      1    40    10
+2  Northern Ireland 2021-12-12     94.53920      1    39     9
+3  Northern Ireland 2021-12-11     92.17271      1    38     8
+4  Northern Ireland 2021-12-10     88.99226      1    37     7
+5  Northern Ireland 2021-12-09     88.63050      1    36     6
+6  Northern Ireland 2021-12-08     89.35401      1    35     5
+7  Northern Ireland 2021-12-07     89.12792      1    34     4
+8  Northern Ireland 2021-12-06     89.88158      1    33     3
+9  Northern Ireland 2021-12-05     91.25324      1    32     2
+10 Northern Ireland 2021-12-04     91.96922      1    31     1
+11 Northern Ireland 2021-12-03     93.13739     NA    NA    NA
+12 Northern Ireland 2021-12-02     93.96642     NA    NA    NA
+13 Northern Ireland 2021-12-01     93.68003     NA    NA    NA
+14 Northern Ireland 2021-11-30     93.31827     NA    NA    NA
+15 Northern Ireland 2021-11-29     91.95414     NA    NA    NA
+16 Northern Ireland 2021-11-28     89.62533      0    25     0
+17 Northern Ireland 2021-11-27     87.01013      0    24     0
+18 Northern Ireland 2021-11-26     85.69122      0    23     0
+19 Northern Ireland 2021-11-25     84.71146      0    22     0
+20 Northern Ireland 2021-11-24     84.38739      0    21     0
+21 Northern Ireland 2021-11-23     84.68132      0    20     0
+22 Northern Ireland 2021-11-22     86.45996      0    19     0
+23 Northern Ireland 2021-11-21     87.10811      0    18     0
+24 Northern Ireland 2021-11-20     87.44725      0    17     0
+25 Northern Ireland 2021-11-19     87.02520      0    16     0
+26 Northern Ireland 2021-11-18     86.93476      0    15     0
+27 Northern Ireland 2021-11-17     86.82925      0    14     0
+28 Northern Ireland 2021-11-16     86.30169      0    13     0
+29 Northern Ireland 2021-11-15     83.66388      0    12     0
+30 Northern Ireland 2021-11-14     82.20931      0    11     0
+31 Northern Ireland 2021-11-13     80.30255      0    10     0
+32 Northern Ireland 2021-11-12     79.03640      0     9     0
+33 Northern Ireland 2021-11-11     76.54932      0     8     0
+34 Northern Ireland 2021-11-10     73.26336      0     7     0
+35 Northern Ireland 2021-11-09     70.85164      0     6     0
+36 Northern Ireland 2021-11-08     69.03532      0     5     0
+37 Northern Ireland 2021-11-07     66.56331      0     4     0
+38 Northern Ireland 2021-11-06     64.55858      0     3     0
+39 Northern Ireland 2021-11-05     61.53640      0     2     0
+40 Northern Ireland 2021-11-04     59.43368      0     1     0
+41 Northern Ireland 2021-11-03     59.07946      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 6541035.658, link = log)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-0.84422  -0.34633  -0.02492   0.37778   0.81407  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  4.177696   0.045152  92.525  < 2e-16 ***
+CP_int      -0.133197   0.089953  -1.481    0.139    
+CP_t1        0.014710   0.002955   4.977 6.45e-07 ***
+CP_t2       -0.009636   0.011898  -0.810    0.418    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(6541036) family taken to be 1)
+
+    Null deviance: 46.110  on 35  degrees of freedom
+Residual deviance:  7.822  on 32  degrees of freedom
+  (5 observations deleted due to missingness)
+AIC: 242.54
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  6541036 
+          Std. Err.:  187998010 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -232.539 
+                Estimate        2.5 %     97.5 %
+(Intercept)  4.177695743  4.088347866 4.26535430
+CP_int      -0.133196841 -0.310429703 0.04224152
+CP_t1        0.014709545  0.008922017 0.02050818
+CP_t2       -0.009636092 -0.032956498 0.01369182
+              Estimate      2.5 %    97.5 %
+(Intercept) 65.2154069 59.6412749 71.190138
+CP_int       0.8752928  0.7331319  1.043146
+CP_t1        1.0148183  1.0089619  1.020720
+CP_t2        0.9904102  0.9675807  1.013786
+ lag Autocorrelation D-W Statistic p-value
+   1       0.8643304     0.1795578       0
+ Alternative hypothesis: rho != 0
+           areaName       date smooth_cases CP_int CP_t1 CP_t2
+1  Northern Ireland 2021-12-13     96.75496      1    40    10
+2  Northern Ireland 2021-12-12     94.53920      1    39     9
+3  Northern Ireland 2021-12-11     92.17271      1    38     8
+4  Northern Ireland 2021-12-10     88.99226      1    37     7
+5  Northern Ireland 2021-12-09     88.63050      1    36     6
+6  Northern Ireland 2021-12-08     89.35401      1    35     5
+7  Northern Ireland 2021-12-07     89.12792      1    34     4
+8  Northern Ireland 2021-12-06     89.88158      1    33     3
+9  Northern Ireland 2021-12-05     91.25324      1    32     2
+10 Northern Ireland 2021-12-04     91.96922      1    31     1
+11 Northern Ireland 2021-12-03     93.13739     NA    NA    NA
+12 Northern Ireland 2021-12-02     93.96642     NA    NA    NA
+13 Northern Ireland 2021-12-01     93.68003     NA    NA    NA
+14 Northern Ireland 2021-11-30     93.31827     NA    NA    NA
+15 Northern Ireland 2021-11-29     91.95414     NA    NA    NA
+16 Northern Ireland 2021-11-28     89.62533      0    25     0
+17 Northern Ireland 2021-11-27     87.01013      0    24     0
+18 Northern Ireland 2021-11-26     85.69122      0    23     0
+19 Northern Ireland 2021-11-25     84.71146      0    22     0
+20 Northern Ireland 2021-11-24     84.38739      0    21     0
+21 Northern Ireland 2021-11-23     84.68132      0    20     0
+22 Northern Ireland 2021-11-22     86.45996      0    19     0
+23 Northern Ireland 2021-11-21     87.10811      0    18     0
+24 Northern Ireland 2021-11-20     87.44725      0    17     0
+25 Northern Ireland 2021-11-19     87.02520      0    16     0
+26 Northern Ireland 2021-11-18     86.93476      0    15     0
+27 Northern Ireland 2021-11-17     86.82925      0    14     0
+28 Northern Ireland 2021-11-16     86.30169      0    13     0
+29 Northern Ireland 2021-11-15     83.66388      0    12     0
+30 Northern Ireland 2021-11-14     82.20931      0    11     0
+31 Northern Ireland 2021-11-13     80.30255      0    10     0
+32 Northern Ireland 2021-11-12     79.03640      0     9     0
+33 Northern Ireland 2021-11-11     76.54932      0     8     0
+34 Northern Ireland 2021-11-10     73.26336      0     7     0
+35 Northern Ireland 2021-11-09     70.85164      0     6     0
+36 Northern Ireland 2021-11-08     69.03532      0     5     0
+37 Northern Ireland 2021-11-07     66.56331      0     4     0
+38 Northern Ireland 2021-11-06     64.55858      0     3     0
+39 Northern Ireland 2021-11-05     61.53640      0     2     0
+40 Northern Ireland 2021-11-04     59.43368      0     1     0
+41 Northern Ireland 2021-11-03     59.07946      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 6541035.658, link = log)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-0.84422  -0.34633  -0.02492   0.37778   0.81407  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  4.177696   0.045152  92.525  < 2e-16 ***
+CP_int      -0.133197   0.089953  -1.481    0.139    
+CP_t1        0.014710   0.002955   4.977 6.45e-07 ***
+CP_t2       -0.009636   0.011898  -0.810    0.418    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(6541036) family taken to be 1)
+
+    Null deviance: 46.110  on 35  degrees of freedom
+Residual deviance:  7.822  on 32  degrees of freedom
+  (5 observations deleted due to missingness)
+AIC: 242.54
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  6541036 
+          Std. Err.:  187998010 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -232.539 
+                Estimate        2.5 %     97.5 %
+(Intercept)  4.177695743  4.088347866 4.26535430
+CP_int      -0.133196841 -0.310429703 0.04224152
+CP_t1        0.014709545  0.008922017 0.02050818
+CP_t2       -0.009636092 -0.032956498 0.01369182
+              Estimate      2.5 %    97.5 %
+(Intercept) 65.2154069 59.6412749 71.190138
+CP_int       0.8752928  0.7331319  1.043146
+CP_t1        1.0148183  1.0089619  1.020720
+CP_t2        0.9904102  0.9675807  1.013786
+ lag Autocorrelation D-W Statistic p-value
+   1       0.8643304     0.1795578       0
+ Alternative hypothesis: rho != 0

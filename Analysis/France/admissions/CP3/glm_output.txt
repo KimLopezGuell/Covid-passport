@@ -1,0 +1,98 @@
+   country                indicator       date admissions CP_int CP_t1 CP_t2
+1   France Daily hospital occupancy 2021-08-14       9648      0     0     0
+2   France Daily hospital occupancy 2021-08-15       9798      0     1     0
+3   France Daily hospital occupancy 2021-08-16      10151      0     2     0
+4   France Daily hospital occupancy 2021-08-17      10219      0     3     0
+5   France Daily hospital occupancy 2021-08-18      10336      0     4     0
+6   France Daily hospital occupancy 2021-08-19      10392      0     5     0
+7   France Daily hospital occupancy 2021-08-20      10515      0     6     0
+8   France Daily hospital occupancy 2021-08-21      10463      0     7     0
+9   France Daily hospital occupancy 2021-08-22      10651      0     8     0
+10  France Daily hospital occupancy 2021-08-23      11007      0     9     0
+11  France Daily hospital occupancy 2021-08-24      11066      0    10     0
+12  France Daily hospital occupancy 2021-08-25      11171      0    11     0
+13  France Daily hospital occupancy 2021-08-26      11104      0    12     0
+14  France Daily hospital occupancy 2021-08-27      11162      0    13     0
+15  France Daily hospital occupancy 2021-08-28      11052      0    14     0
+16  France Daily hospital occupancy 2021-08-29      11092      0    15     0
+17  France Daily hospital occupancy 2021-08-30      11245     NA    NA    NA
+18  France Daily hospital occupancy 2021-08-31      11120     NA    NA    NA
+19  France Daily hospital occupancy 2021-09-01      11119     NA    NA    NA
+20  France Daily hospital occupancy 2021-09-02      10934     NA    NA    NA
+21  France Daily hospital occupancy 2021-09-03      10816     NA    NA    NA
+22  France Daily hospital occupancy 2021-09-04      10654     NA    NA    NA
+23  France Daily hospital occupancy 2021-09-05      10644     NA    NA    NA
+24  France Daily hospital occupancy 2021-09-06      10757      1    23     1
+25  France Daily hospital occupancy 2021-09-07      10646      1    24     2
+26  France Daily hospital occupancy 2021-09-08      10438      1    25     3
+27  France Daily hospital occupancy 2021-09-09      10323      1    26     4
+28  France Daily hospital occupancy 2021-09-10      10115      1    27     5
+29  France Daily hospital occupancy 2021-09-11      10018      1    28     6
+30  France Daily hospital occupancy 2021-09-12      10012      1    29     7
+31  France Daily hospital occupancy 2021-09-13       9986      1    30     8
+32  France Daily hospital occupancy 2021-09-14       9739      1    31     9
+33  France Daily hospital occupancy 2021-09-15       9555      1    32    10
+34  France Daily hospital occupancy 2021-09-16       9297      1    33    11
+35  France Daily hospital occupancy 2021-09-17       9070      1    34    12
+36  France Daily hospital occupancy 2021-09-18       8912      1    35    13
+37  France Daily hospital occupancy 2021-09-19       8887      1    36    14
+38  France Daily hospital occupancy 2021-09-20       8845      1    37    15
+39  France Daily hospital occupancy 2021-09-21       8594      1    38    16
+40  France Daily hospital occupancy 2021-09-22       8414      1    39    17
+41  France Daily hospital occupancy 2021-09-23       8237      1    40    18
+42  France Daily hospital occupancy 2021-09-24       8107      1    41    19
+43  France Daily hospital occupancy 2021-09-25       7980      1    42    20
+44  France Daily hospital occupancy 2021-09-26       7994      1    43    21
+45  France Daily hospital occupancy 2021-09-27       7980      1    44    22
+46  France Daily hospital occupancy 2021-09-28       7801      1    45    23
+47  France Daily hospital occupancy 2021-09-29       7726      1    46    24
+48  France Daily hospital occupancy 2021-09-30       7565      1    47    25
+49  France Daily hospital occupancy 2021-10-01       7410      1    48    26
+50  France Daily hospital occupancy 2021-10-02       7294      1    49    27
+51  France Daily hospital occupancy 2021-10-03       7308      1    50    28
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 18604.58336, link = log)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-2.16071  -0.59860  -0.06842   0.68395   2.04542  
+
+Coefficients:
+              Estimate Std. Error  z value Pr(>|z|)    
+(Intercept)  9.1981321  0.0058822 1563.730   <2e-16 ***
+CP_int      -0.1020186  0.0110796   -9.208   <2e-16 ***
+CP_t1        0.0094493  0.0006600   14.316   <2e-16 ***
+CP_t2       -0.0245074  0.0007262  -33.746   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(18604.58) family taken to be 1)
+
+    Null deviance: 4783.790  on 43  degrees of freedom
+Residual deviance:   42.792  on 40  degrees of freedom
+  (7 observations deleted due to missingness)
+AIC: 554.5
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  18605 
+          Std. Err.:  11419 
+Warning while fitting theta: alternation limit reached 
+
+ 2 x log-likelihood:  -544.497 
+                Estimate        2.5 %      97.5 %
+(Intercept)  9.198132074  9.186583762  9.20967141
+CP_int      -0.102018558 -0.123760991 -0.08027108
+CP_t1        0.009449292  0.008153322  0.01074538
+CP_t2       -0.024507437 -0.025932999 -0.02308199
+                Estimate        2.5 %       97.5 %
+(Intercept) 9878.6592048 9765.2335707 9993.3125981
+CP_int         0.9030128    0.8835910    0.9228661
+CP_t1          1.0094941    1.0081867    1.0108033
+CP_t2          0.9757904    0.9744004    0.9771824
+ lag Autocorrelation D-W Statistic p-value
+   1       0.5769295     0.7378477       0
+ Alternative hypothesis: rho != 0

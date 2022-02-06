@@ -1,0 +1,70 @@
+          date deaths_male deaths_female deaths_young deaths_old V6 CP_int CP_t1 CP_t2
+129 2021-05-10         692           500           92       1100 NA      0     0     0
+136 2021-05-17         514           406           81        839 NA      0     1     0
+143 2021-05-24         430           317           59        688 NA      0     2     0
+150 2021-05-31         339           237           44        532 NA      0     3     0
+157 2021-06-07         247           134           41        340 NA      0     4     0
+164 2021-06-14         170           150           40        280 NA      0     5     0
+171 2021-06-21         126           104           33        197 NA      0     6     0
+178 2021-06-28          95            78           26        147 NA      0     7     0
+185 2021-07-05          88            76           29        135 NA      0     8     0
+192 2021-07-12          49            62           10        101 NA      0     9     0
+199 2021-07-19          88            56           20        124 NA     NA    NA    NA
+206 2021-07-26         146           113           26        233 NA     NA    NA    NA
+213 2021-08-02         192           129           19        302 NA     NA    NA    NA
+220 2021-08-09         225           208           37        396 NA      1    13     1
+227 2021-08-16         410           335           89        656 NA      1    14     2
+234 2021-08-23         386           293           98        581 NA      1    15     3
+241 2021-08-30         350           286           68        568 NA      1    16     4
+248 2021-09-06         299           265           61        503 NA      1    17     5
+255 2021-09-13         271           186           47        410 NA      1    18     6
+262 2021-09-20         207           177           44        340 NA      1    19     7
+269 2021-09-27         181           129           50        260 NA      1    20     8
+276 2021-10-04         137           100           29        208 NA      1    21     9
+283 2021-10-11         126            67           35        158 NA      1    22    10
+290 2021-10-18         102            88           20        170 NA      1    23    11
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 41.93073133, link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-3.3692  -0.5058  -0.0590   0.4803   1.3341  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  7.01721    0.09445  74.293  < 2e-16 ***
+CP_int       2.99074    0.18603  16.077  < 2e-16 ***
+CP_t1       -0.27453    0.01860 -14.757  < 2e-16 ***
+CP_t2        0.13429    0.02434   5.516 3.47e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(41.9307) family taken to be 1)
+
+    Null deviance: 312.569  on 20  degrees of freedom
+Residual deviance:  20.319  on 17  degrees of freedom
+  (3 observations deleted due to missingness)
+AIC: 237.75
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  41.9 
+          Std. Err.:  14.2 
+
+ 2 x log-likelihood:  -227.749 
+              Estimate       2.5 %     97.5 %
+(Intercept)  7.0172098  6.83666549  7.2050990
+CP_int       2.9907402  2.62071579  3.3601143
+CP_t1       -0.2745286 -0.31090564 -0.2384036
+CP_t2        0.1342856  0.08548365  0.1832053
+                Estimate      2.5 %       97.5 %
+(Intercept) 1115.6692756 931.378260 1346.2779292
+CP_int        19.9004078  13.745559   28.7924819
+CP_t1          0.7599303   0.732783    0.7878846
+CP_t2          1.1437195   1.089244    1.2010610
+ lag Autocorrelation D-W Statistic p-value
+   1       0.1514171      1.694741       0
+ Alternative hypothesis: rho != 0

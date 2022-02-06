@@ -1,0 +1,86 @@
+         date smooth_cases countriesAndTerritories CP_int CP_t1 CP_t2
+1  2020-08-09    23287.571                  France      1    39    15
+2  2020-08-08    22982.429                  France      1    38    14
+3  2020-08-07    22732.857                  France      1    37    13
+4  2020-08-06    22648.429                  France      1    36    12
+5  2020-08-05    22527.000                  France      1    35    11
+6  2020-08-04    22200.714                  France      1    34    10
+7  2020-08-03    22091.000                  France      1    33     9
+8  2020-08-02    21909.571                  France      1    32     8
+9  2020-08-01    21788.143                  France      1    31     7
+10 2020-07-31    21794.143                  France      1    30     6
+11 2020-07-30    21811.714                  France      1    29     5
+12 2020-07-29    21321.286                  France      1    28     4
+13 2020-07-28    21220.714                  France      1    27     3
+14 2020-07-27    20818.429                  France      1    26     2
+15 2020-07-26    20349.714                  France      1    25     1
+16 2020-07-25    19436.143                  France     NA    NA    NA
+17 2020-07-24    18194.714                  France     NA    NA    NA
+18 2020-07-23    18029.571                  France     NA    NA    NA
+19 2020-07-22    17510.286                  France     NA    NA    NA
+20 2020-07-21    15822.000                  France     NA    NA    NA
+21 2020-07-20    14309.857                  France      0    19     0
+22 2020-07-19    11696.714                  France      0    18     0
+23 2020-07-18     9887.571                  France      0    17     0
+24 2020-07-17     8283.143                  France      0    16     0
+25 2020-07-16     7870.143                  France      0    15     0
+26 2020-07-15     6687.857                  France      0    14     0
+27 2020-07-14     5794.571                  France      0    13     0
+28 2020-07-13     4890.571                  France      0    12     0
+29 2020-07-12     5008.429                  France      0    11     0
+30 2020-07-11     4323.571                  France      0    10     0
+31 2020-07-10     3842.857                  France      0     9     0
+32 2020-07-09     3776.571                  France      0     8     0
+33 2020-07-08     3532.714                  France      0     7     0
+34 2020-07-07     3291.286                  France      0     6     0
+35 2020-07-06     3020.286                  France      0     5     0
+36 2020-07-05     2766.286                  France      0     4     0
+37 2020-07-04     2534.286                  France      0     3     0
+38 2020-07-03     2352.714                  France      0     2     0
+39 2020-07-02     2311.714                  France      0     1     0
+40 2020-07-01     2173.000                  France      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 185.2541081, link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.3736  -0.3451  -0.0161   0.1146   3.1682  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  7.537329   0.032764  230.05   <2e-16 ***
+CP_int       0.113618   0.060424    1.88   0.0601 .  
+CP_t1        0.095036   0.002921   32.54   <2e-16 ***
+CP_t2       -0.086933   0.005289  -16.44   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(185.2541) family taken to be 1)
+
+    Null deviance: 4178.458  on 34  degrees of freedom
+Residual deviance:   35.318  on 31  degrees of freedom
+  (5 observations deleted due to missingness)
+AIC: 565.26
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  185.3 
+          Std. Err.:  45.9 
+
+ 2 x log-likelihood:  -555.265 
+               Estimate        2.5 %      97.5 %
+(Intercept)  7.53732939  7.475193451  7.60021632
+CP_int       0.11361768 -0.002724767  0.22997424
+CP_t1        0.09503562  0.089526625  0.10054875
+CP_t2       -0.08693322 -0.097194068 -0.07667318
+                Estimate        2.5 %       97.5 %
+(Intercept) 1876.8110921 1763.7428522 1998.6281870
+CP_int         1.1203237    0.9972789    1.2585676
+CP_t1          1.0996980    1.0936565    1.1057775
+CP_t2          0.9167383    0.9073799    0.9261925
+ lag Autocorrelation D-W Statistic p-value
+   1       0.6000513     0.6917089       0
+ Alternative hypothesis: rho != 0

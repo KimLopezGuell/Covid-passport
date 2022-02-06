@@ -1,0 +1,57 @@
+   country                               indicator       date admissions CP_int CP_t1 CP_t2
+1  Germany Weekly new hospital admissions per 100k 2021-10-03   3.034868      0     0     0
+2  Germany Weekly new hospital admissions per 100k 2021-10-10   3.104608      0     1     0
+3  Germany Weekly new hospital admissions per 100k 2021-10-17   3.644487      0     2     0
+4  Germany Weekly new hospital admissions per 100k 2021-10-24   5.612823      0     3     0
+5  Germany Weekly new hospital admissions per 100k 2021-10-31   6.948694      0     4     0
+6  Germany Weekly new hospital admissions per 100k 2021-11-07   8.146288      0     5     0
+7  Germany Weekly new hospital admissions per 100k 2021-11-14  10.065325     NA    NA    NA
+8  Germany Weekly new hospital admissions per 100k 2021-11-21  11.591176      1     7     1
+9  Germany Weekly new hospital admissions per 100k 2021-11-28  11.652499      1     8     2
+10 Germany Weekly new hospital admissions per 100k 2021-12-05  10.315425      1     9     3
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 3040435.022, link = log)
+
+Deviance Residuals: 
+       1         2         3         4         5         6         8         9        10  
+ 0.21201  -0.14197  -0.28492   0.14019   0.12246  -0.05906  -0.06976   0.14207  -0.07389  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)  
+(Intercept)   0.9859     0.3930   2.509   0.0121 *
+CP_int        0.1831     0.5795   0.316   0.7520  
+CP_t1         0.2264     0.1111   2.039   0.0414 *
+CP_t2        -0.2835     0.2390  -1.186   0.2355  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(3040435) family taken to be 1)
+
+    Null deviance: 14.45900  on 8  degrees of freedom
+Residual deviance:  0.21493  on 5  degrees of freedom
+  (1 observation deleted due to missingness)
+AIC: 43.565
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  3040435 
+          Std. Err.:  363755536 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -33.565 
+              Estimate       2.5 %    97.5 %
+(Intercept)  0.9859484  0.14059798 1.6912456
+CP_int       0.1830888 -0.97316698 1.3113214
+CP_t1        0.2264468  0.01354675 0.4519928
+CP_t2       -0.2835003 -0.75675248 0.1844818
+             Estimate     2.5 %   97.5 %
+(Intercept) 2.6803527 1.1509618 5.426235
+CP_int      1.2009210 0.3778844 3.711074
+CP_t1       1.2541359 1.0136389 1.571441
+CP_t2       0.7531429 0.4691876 1.202595
+ lag Autocorrelation D-W Statistic p-value
+   1      -0.1672382      2.099947    0.08
+ Alternative hypothesis: rho != 0

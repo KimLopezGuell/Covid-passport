@@ -1,0 +1,79 @@
+         date smooth_cases countriesAndTerritories CP_int CP_t1 CP_t2
+1  2020-07-24     764.0000                 Denmark      1    32    12
+2  2020-07-23     774.2857                 Denmark      1    31    11
+3  2020-07-22     773.8571                 Denmark      1    30    10
+4  2020-07-21     814.0000                 Denmark      1    29     9
+5  2020-07-20     850.1429                 Denmark      1    28     8
+6  2020-07-19     898.1429                 Denmark      1    27     7
+7  2020-07-18     948.2857                 Denmark      1    26     6
+8  2020-07-17     981.8571                 Denmark      1    25     5
+9  2020-07-16     982.4286                 Denmark      1    24     4
+10 2020-07-15     977.8571                 Denmark      1    23     3
+11 2020-07-14     905.0000                 Denmark      1    22     2
+12 2020-07-13     846.5714                 Denmark      1    21     1
+13 2020-07-12     777.5714                 Denmark     NA    NA    NA
+14 2020-07-11     704.2857                 Denmark     NA    NA    NA
+15 2020-07-10     631.0000                 Denmark     NA    NA    NA
+16 2020-07-09     558.0000                 Denmark     NA    NA    NA
+17 2020-07-08     527.0000                 Denmark     NA    NA    NA
+18 2020-07-07     516.5714                 Denmark      0    15     0
+19 2020-07-06     484.4286                 Denmark      0    14     0
+20 2020-07-05     458.2857                 Denmark      0    13     0
+21 2020-07-04     408.4286                 Denmark      0    12     0
+22 2020-07-03     365.7143                 Denmark      0    11     0
+23 2020-07-02     339.1429                 Denmark      0    10     0
+24 2020-07-01     308.0000                 Denmark      0     9     0
+25 2020-06-30     272.0000                 Denmark      0     8     0
+26 2020-06-29     257.1429                 Denmark      0     7     0
+27 2020-06-28     214.0000                 Denmark      0     6     0
+28 2020-06-27     197.2857                 Denmark      0     5     0
+29 2020-06-26     184.7143                 Denmark      0     4     0
+30 2020-06-25     184.4286                 Denmark      0     3     0
+31 2020-06-24     186.5714                 Denmark      0     2     0
+32 2020-06-23     193.4286                 Denmark      0     1     0
+33 2020-06-22     190.7143                 Denmark      0     0     0
+
+Call:
+glm.nb(formula = dataset[, output] ~ CP_int + CP_t1 + CP_t2, 
+    data = dataset, init.theta = 347.5452578, link = log)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-2.19373  -0.64135  -0.02456   0.60784   2.37851  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  5.033991   0.042377 118.791  < 2e-16 ***
+CP_int       0.283436   0.067407   4.205 2.61e-05 ***
+CP_t1        0.079237   0.004436  17.864  < 2e-16 ***
+CP_t2       -0.099026   0.006915 -14.320  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(347.5453) family taken to be 1)
+
+    Null deviance: 2037.062  on 27  degrees of freedom
+Residual deviance:   30.796  on 24  degrees of freedom
+  (5 observations deleted due to missingness)
+AIC: 288.29
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  348 
+          Std. Err.:  168 
+
+ 2 x log-likelihood:  -278.29 
+               Estimate       2.5 %      97.5 %
+(Intercept)  5.03399142  4.95117105  5.11629575
+CP_int       0.28343633  0.15168330  0.41514745
+CP_t1        0.07923667  0.07065265  0.08785986
+CP_t2       -0.09902645 -0.11265903 -0.08541181
+               Estimate       2.5 %      97.5 %
+(Intercept) 153.5446531 141.3403839 166.7166649
+CP_int        1.3276844   1.1637916   1.5145941
+CP_t1         1.0824605   1.0732084   1.0918351
+CP_t2         0.9057187   0.8934552   0.9181341
+ lag Autocorrelation D-W Statistic p-value
+   1        0.606589     0.5978446       0
+ Alternative hypothesis: rho != 0
